@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     siteName: "sckrilla",
     type: "website",
   },
+  verification: {
+    other: { "impact-site-verification": "ca5f1855-c5ae-4207-9840-b419c4df5101" },
+  },
 };
 
 export default function RootLayout({
