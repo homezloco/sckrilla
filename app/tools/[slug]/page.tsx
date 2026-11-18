@@ -110,6 +110,12 @@ export default async function ToolPage({
         )}
       </section>
 
+      <p style={{ fontSize: "0.85rem" }}>
+        <a href={`/tools/alternatives/${t.slug}`}>
+          alternatives to {t.name.toLowerCase()} →
+        </a>
+      </p>
+
       {related.length > 0 && (
         <section className="section">
           <h2>also in {categoryLabel(t.category)}</h2>

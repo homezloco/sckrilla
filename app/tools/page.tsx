@@ -32,7 +32,11 @@ export default async function ToolsPage() {
 
       {[...byCat.entries()].map(([cat, list]) => (
         <section className="section" key={cat}>
-          <h2>{categoryLabel(cat)}</h2>
+          <h2>
+            <a href={`/tools/category/${cat}`} style={{ color: "inherit", textDecoration: "none" }}>
+              {categoryLabel(cat)}
+            </a>
+          </h2>
           <div className="card-grid">
             {list.map((t) => (
               <a
