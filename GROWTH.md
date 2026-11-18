@@ -11,7 +11,7 @@ can't show. never commit secrets — this repo is public.
 - [x] g-0001 pick the first niche — a findings post at content/findings/ naming one niche worth a pSEO run, why it wins, and the search terms to target — branch growth/g-0001-first-niche — #1
 - [x] g-0002 first real ledger entry — update data/ledger.jsonl with the g-0001 round's actual spend from the run, scrappy commentary, zero revenue claimed — branch growth/g-0002-ledger-entry — #2
 - [x] g-0003 niche site outline — a findings post with the page map + title tags for the g-0001 niche directory, honest about what's unproven — branch growth/g-0003-niche-outline — #3
-- [x] g-0004 affiliate/deal scan — research post naming affiliate programs that fit the niche, commission terms, and signup requirements — branch growth/g-0004-affiliate-scan (partial: the research itself landed as docs/affiliate-programs.md, a side effect of the /admin build, not as its own findings post on its own branch — still owes the real g-0004 treatment) — #4
+- [x] g-0004 affiliate/deal scan — research post naming affiliate programs that fit the niche, commission terms, and signup requirements — branch growth/g-0004-affiliate-scan — #4
 - [x] g-0005 outreach kit — a prepared (NOT sent) outreach email + target list for the best-fit affiliate program from g-0004, filed under growth/kits/ — a human sends it (ends-needs-human) — branch growth/g-0005-outreach-kit — #5
 - [x] g-0006 mogul counterpost draft — findings post contrasting our public ledger + gates with black-box "my agent earns" claims, linked receipts — branch growth/g-0006-counterpost — #6
 - [x] g-0007 monetization mechanics — the /earn page exists; write docs/monetization.md (the operator runbook: stripe link → handle → ledger line within a day; scan → niche email → report within 48h) and review the page for conversion gaps — branch growth/g-0007-earn-mechanics — #7
@@ -23,6 +23,10 @@ can't show. never commit secrets — this repo is public.
 - g-0001 pick the first niche — #1
 - g-0002 first real ledger entry — #2
 - g-0003 niche site outline — #3
+- g-0004 affiliate/deal scan — #4
+- g-0005 outreach kit — #5
+- g-0006 mogul counterpost draft — #6
+- g-0007 monetization mechanics — #7
 
 ## shipped outside the queue
 
