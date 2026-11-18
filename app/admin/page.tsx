@@ -17,6 +17,17 @@ interface RunRow {
   at?: string;
 }
 
+interface Analytics {
+  days: number;
+  totals: { views: number; uniques: number; jsRan: number; bots: number; humans: number };
+  byDay: { date: string; views: number; uniques: number; bots: number }[];
+  paths: [string, number][];
+  referrers: [string, number][];
+  browsers: [string, number][];
+  devices: [string, number][];
+  countries: [string, number][];
+}
+
 interface State {
   tools: ToolRow[];
   ledger: {
@@ -35,6 +46,7 @@ const usd = (n: number) =>
 export default function AdminPage() {
   const [key, setKey] = useState("");
   const [state, setState] = useState<State | null>(null);
+  const [analytics, setAnalytics] = useState<Analytics | null>(null);
   const [error, setError] = useState("");
   const [busy, setBusy] = useState<string | null>(null);
   const [drafts, setDrafts] = useState<Record<string, { url: string; program: string }>>({});
@@ -49,6 +61,10 @@ export default function AdminPage() {
     setError("");
     const data = (await res.json()) as State;
     setState(data);
+    fetch(`/api/admin/analytics?key=${encodeURIComponent(k)}&days=14`)
+      .then((r) => (r.ok ? r.json() : null))
+      .then((a) => setAnalytics(a as Analytics | null))
+      .catch(() => {});
     setDrafts(
       Object.fromEntries(
         data.tools.map((t) => [t.slug, { url: t.url, program: t.program }]),
@@ -130,6 +146,119 @@ export default function AdminPage() {
               <strong>{state.ledger.gates.humanTouched}</strong>
             </div>
           </div>
+
+          {analytics && (
+            <>
+              <h2>site traffic — last {analytics.days} days</h2>
+              <div className="stats">
+                <div>
+                  <p className="mono" style={{ fontSize: "0.7rem", color: "var(--text-faint)" }}>views</p>
+                  <strong>{analytics.totals.views}</strong>
+                </div>
+                <div>
+                  <p className="mono" style={{ fontSize: "0.7rem", color: "var(--text-faint)" }}>unique visitors</p>
+                  <strong>{analytics.totals.uniques}</strong>
+                </div>
+                <div>
+                  <p className="mono" style={{ fontSize: "0.7rem", color: "var(--text-faint)" }}>humans / bots</p>
+                  <strong>
+                    {analytics.totals.humans} / {analytics.totals.bots}
+                  </strong>
+                </div>
+                <div>
+                  <p className="mono" style={{ fontSize: "0.7rem", color: "var(--text-faint)" }}>ran js</p>
+                  <strong>{analytics.totals.jsRan}</strong>
+                </div>
+              </div>
+              <div className="card-grid">
+                <div className="card">
+                  <h3>by day</h3>
+                  <table style={{ width: "100%", fontSize: "0.8rem", borderCollapse: "collapse" }}>
+                    <tbody>
+                      {analytics.byDay.map((d) => (
+                        <tr key={d.date}>
+                          <td className="mono" style={{ padding: "0.2rem 0", color: "var(--text-faint)" }}>{d.date.slice(5)}</td>
+                          <td style={{ textAlign: "right" }}>{d.views} views</td>
+                          <td style={{ textAlign: "right", color: "var(--text-faint)" }}>{d.uniques} uniq</td>
+                          <td style={{ textAlign: "right", color: "var(--text-faint)" }}>{d.bots} bots</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                <div className="card">
+                  <h3>top paths</h3>
+                  <table style={{ width: "100%", fontSize: "0.8rem", borderCollapse: "collapse" }}>
+                    <tbody>
+                      {analytics.paths.map(([p, n]) => (
+                        <tr key={p}>
+                          <td className="mono" style={{ padding: "0.2rem 0" }}>{p}</td>
+                          <td style={{ textAlign: "right", color: "var(--text-faint)" }}>{n}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                <div className="card">
+                  <h3>referrers</h3>
+                  <table style={{ width: "100%", fontSize: "0.8rem", borderCollapse: "collapse" }}>
+                    <tbody>
+                      {analytics.referrers.length === 0 && (
+                        <tr><td style={{ color: "var(--text-faint)" }}>none yet</td></tr>
+                      )}
+                      {analytics.referrers.map(([r, n]) => (
+                        <tr key={r}>
+                          <td className="mono" style={{ padding: "0.2rem 0" }}>{r}</td>
+                          <td style={{ textAlign: "right", color: "var(--text-faint)" }}>{n}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                <div className="card">
+                  <h3>devices</h3>
+                  <table style={{ width: "100%", fontSize: "0.8rem", borderCollapse: "collapse" }}>
+                    <tbody>
+                      {analytics.devices.map(([d, n]) => (
+                        <tr key={d}>
+                          <td className="mono" style={{ padding: "0.2rem 0" }}>{d}</td>
+                          <td style={{ textAlign: "right", color: "var(--text-faint)" }}>{n}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                  <h3 style={{ marginTop: "1rem" }}>browsers</h3>
+                  <table style={{ width: "100%", fontSize: "0.8rem", borderCollapse: "collapse" }}>
+                    <tbody>
+                      {analytics.browsers.map(([b, n]) => (
+                        <tr key={b}>
+                          <td className="mono" style={{ padding: "0.2rem 0" }}>{b}</td>
+                          <td style={{ textAlign: "right", color: "var(--text-faint)" }}>{n}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                <div className="card">
+                  <h3>countries</h3>
+                  <table style={{ width: "100%", fontSize: "0.8rem", borderCollapse: "collapse" }}>
+                    <tbody>
+                      {analytics.countries.map(([c, n]) => (
+                        <tr key={c}>
+                          <td className="mono" style={{ padding: "0.2rem 0" }}>{c}</td>
+                          <td style={{ textAlign: "right", color: "var(--text-faint)" }}>{n}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <p className="mono" style={{ fontSize: "0.72rem", color: "var(--text-faint)", marginTop: "0.5rem" }}>
+                kv rollup · uniques = daily ip+ua hash · bots = ua match + cf verified category ·
+                "ran js" = client beacon fired
+              </p>
+            </>
+          )}
 
           <h2>deal links</h2>
           <p style={{ fontSize: "0.85rem", color: "var(--text-faint)" }}>

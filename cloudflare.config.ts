@@ -3,7 +3,7 @@ import { bindings, defineConfig, defineWorker } from "cf/config";
 export default defineConfig({
   worker: defineWorker({
     name: "sckrilla",
-    entrypoint: "vinext/server/fetch-handler",
+    entrypoint: "./worker/entry.ts",
     compatibilityDate: "2026-11-18",
     compatibilityFlags: ["nodejs_compat"],
     assets: {
@@ -14,6 +14,7 @@ export default defineConfig({
     env: {
       ASSETS: bindings.assets(),
       IMAGES: bindings.images(),
+      ANALYTICS_KV: bindings.kv({ id: "165e8434d8e04c0cab15b0f1fcb464aa" }),
     },
   }),
 });

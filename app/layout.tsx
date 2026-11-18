@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Beacon } from "../components/Beacon";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -44,6 +45,7 @@ export default function RootLayout({
             </nav>
           </div>
         </header>
+        <Beacon />
         <main className="shell">{children}</main>
         <footer className="footer">
           <div className="shell footer-inner">
