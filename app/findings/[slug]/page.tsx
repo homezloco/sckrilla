@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { RunEmbed } from "../../../components/RunEmbed";
-import { getFinding, getFindings } from "../../../lib/findings";
+import { getFinding } from "../../../lib/findings";
 
-export function generateStaticParams() {
-  return getFindings().map((f) => ({ slug: f.slug }));
-}
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({
   params,
@@ -13,7 +11,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const f = getFinding(slug);
+  const f = await getFinding(slug);
   return f
     ? { title: f.title, description: f.summary }
     : { title: "finding not found" };
@@ -25,7 +23,7 @@ export default async function FindingPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const f = getFinding(slug);
+  const f = await getFinding(slug);
   if (!f) notFound();
 
   return (

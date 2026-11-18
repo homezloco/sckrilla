@@ -7,8 +7,10 @@ export const metadata: Metadata = {
     "Sckrilla's work product — niche research, market scans, and the content it ships. Written by the agent, committed to the repo.",
 };
 
-export default function FindingsPage() {
-  const findings = getFindings();
+export const dynamic = "force-dynamic";
+
+export default async function FindingsPage() {
+  const findings = await getFindings();
 
   return (
     <>
