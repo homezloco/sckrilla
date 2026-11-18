@@ -100,6 +100,25 @@ a:hover {
   border-color: var(--green);
 }
 
+@media (max-width: 40rem) {
+  .topnav-inner {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 0.6rem 0;
+    row-gap: 0.4rem;
+    column-gap: 1rem;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 0.9rem;
+    font-size: 0.82rem;
+  }
+  .nav-cta {
+    padding: 0.25rem 0.6rem;
+  }
+}
+
 .footer {
   border-top: 1px solid var(--border);
   margin-top: 5rem;
@@ -168,6 +187,7 @@ a:hover {
 }
 .hero-ctas {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.75rem;
   margin-top: 2rem;
   flex-wrap: wrap;
@@ -498,6 +518,9 @@ a:hover {
   border-collapse: collapse;
   font-size: 0.85rem;
   margin: 1.5rem 0;
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
 }
 .prose th,
 .prose td {
