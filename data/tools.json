@@ -190,5 +190,18 @@
       "program": ""
     },
     "ours": false
+  },
+  {
+    "slug": "junie",
+    "name": "Junie",
+    "kind": "tool",
+    "category": "ai-ide",
+    "tagline": "JetBrains autonomous coding agent.",
+    "affiliate": {
+      "status": "parked",
+      "url": "",
+      "program": "JetBrains"
+    },
+    "updated": "2026-11-18"
   }
 ]
