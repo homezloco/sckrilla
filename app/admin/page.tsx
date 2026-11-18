@@ -5,6 +5,7 @@ import { useState } from "react";
 interface ToolRow {
   slug: string;
   name: string;
+  category: string;
   status: "live" | "parked" | "na";
   url: string;
   program: string;
@@ -51,6 +52,14 @@ export default function AdminPage() {
   const [error, setError] = useState("");
   const [busy, setBusy] = useState<string | null>(null);
   const [drafts, setDrafts] = useState<Record<string, { url: string; program: string }>>({});
+  const [newTool, setNewTool] = useState({
+    name: "",
+    category: "",
+    tagline: "",
+    url: "",
+    program: "",
+    ours: false,
+  });
 
   async function load(k: string) {
     const res = await fetch(`/api/admin/state?key=${encodeURIComponent(k)}`);
@@ -87,6 +96,24 @@ export default function AdminPage() {
       setError(`${slug}: ${j.error ?? res.status}`);
       return;
     }
+    setError("");
+    await load(key);
+  }
+
+  async function create() {
+    setBusy("new");
+    const res = await fetch("/api/admin/affiliate", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "x-admin-key": key },
+      body: JSON.stringify({ create: true, ...newTool }),
+    });
+    setBusy(null);
+    if (!res.ok) {
+      const j = (await res.json().catch(() => ({}))) as { error?: string };
+      setError(`add: ${j.error ?? res.status}`);
+      return;
+    }
+    setNewTool({ name: "", category: "", tagline: "", url: "", program: "", ours: false });
     setError("");
     await load(key);
   }
@@ -374,6 +401,124 @@ export default function AdminPage() {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="card" style={{ padding: "0.9rem 1rem", marginTop: "0.75rem" }}>
+            <h3 style={{ marginTop: 0 }}>add a tool</h3>
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                gap: "0.6rem",
+                alignItems: "center",
+              }}
+            >
+              <input
+                type="text"
+                placeholder="name *"
+                value={newTool.name}
+                onChange={(e) => setNewTool((t) => ({ ...t, name: e.target.value }))}
+                style={{
+                  width: "11rem",
+                  padding: "0.45rem 0.7rem",
+                  background: "var(--surface)",
+                  border: "1px solid var(--border)",
+                  borderRadius: "0.4rem",
+                  color: "var(--text)",
+                  fontSize: "0.8rem",
+                }}
+              />
+              <input
+                type="text"
+                placeholder="category *"
+                list="admin-categories"
+                value={newTool.category}
+                onChange={(e) => setNewTool((t) => ({ ...t, category: e.target.value }))}
+                style={{
+                  width: "11rem",
+                  padding: "0.45rem 0.7rem",
+                  background: "var(--surface)",
+                  border: "1px solid var(--border)",
+                  borderRadius: "0.4rem",
+                  color: "var(--text)",
+                  fontSize: "0.8rem",
+                }}
+              />
+              <datalist id="admin-categories">
+                {[...new Set(state.tools.map((t) => t.category))].map((c) => (
+                  <option key={c} value={c} />
+                ))}
+              </datalist>
+              <input
+                type="text"
+                placeholder="tagline"
+                value={newTool.tagline}
+                onChange={(e) => setNewTool((t) => ({ ...t, tagline: e.target.value }))}
+                style={{
+                  flex: 1,
+                  minWidth: "14rem",
+                  padding: "0.45rem 0.7rem",
+                  background: "var(--surface)",
+                  border: "1px solid var(--border)",
+                  borderRadius: "0.4rem",
+                  color: "var(--text)",
+                  fontSize: "0.8rem",
+                }}
+              />
+              <input
+                type="url"
+                placeholder="affiliate url (blank = parked)"
+                value={newTool.url}
+                onChange={(e) => setNewTool((t) => ({ ...t, url: e.target.value }))}
+                style={{
+                  flex: 1,
+                  minWidth: "14rem",
+                  padding: "0.45rem 0.7rem",
+                  background: "var(--surface)",
+                  border: "1px solid var(--border)",
+                  borderRadius: "0.4rem",
+                  color: "var(--text)",
+                  fontSize: "0.8rem",
+                }}
+              />
+              <input
+                type="text"
+                placeholder="program"
+                value={newTool.program}
+                onChange={(e) => setNewTool((t) => ({ ...t, program: e.target.value }))}
+                style={{
+                  width: "9rem",
+                  padding: "0.45rem 0.7rem",
+                  background: "var(--surface)",
+                  border: "1px solid var(--border)",
+                  borderRadius: "0.4rem",
+                  color: "var(--text)",
+                  fontSize: "0.8rem",
+                }}
+              />
+              <label
+                className="mono"
+                style={{ fontSize: "0.75rem", color: "var(--text-faint)", display: "flex", gap: "0.35rem", alignItems: "center" }}
+              >
+                <input
+                  type="checkbox"
+                  checked={newTool.ours}
+                  onChange={(e) => setNewTool((t) => ({ ...t, ours: e.target.checked }))}
+                />
+                ours
+              </label>
+              <button
+                className="btn btn-primary"
+                style={{ padding: "0.45rem 0.9rem", fontSize: "0.8rem" }}
+                disabled={busy === "new" || !newTool.name || !newTool.category}
+                onClick={() => void create()}
+              >
+                {busy === "new" ? "…" : "add"}
+              </button>
+            </div>
+            <p className="mono" style={{ fontSize: "0.7rem", color: "var(--text-faint)", marginTop: "0.6rem", marginBottom: 0 }}>
+              url filled → goes live immediately · blank → parked · ours → na + disclosure badge. commits to data/tools.json on main.
+            </p>
           </div>
 
           <div className="card-grid" style={{ marginTop: "2.5rem" }}>

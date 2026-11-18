@@ -61,6 +61,7 @@ export async function GET(request: Request) {
     tools: tools.map((t) => ({
       slug: t.slug,
       name: t.name,
+      category: t.category,
       status: t.affiliate.status,
       url: t.affiliate.url,
       program: t.affiliate.program ?? "",

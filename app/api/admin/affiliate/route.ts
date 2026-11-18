@@ -1,9 +1,21 @@
-import { adminKeyOk, updateToolAffiliate } from "../../../../lib/admin";
+import {
+  adminKeyOk,
+  createTool,
+  updateToolAffiliate,
+} from "../../../../lib/admin";
 
 export const dynamic = "force-dynamic";
 
 interface Body {
+  create?: boolean;
   slug?: string;
+  name?: string;
+  category?: string;
+  tagline?: string;
+  pricing?: string;
+  fit?: string;
+  watchOut?: string;
+  ours?: boolean;
   url?: string;
   status?: "live" | "parked" | "na";
   program?: string;
@@ -19,6 +31,27 @@ export async function POST(request: Request) {
   } catch {
     return Response.json({ error: "bad json" }, { status: 400 });
   }
+
+  if (body.create) {
+    if (!body.name || !body.category)
+      return Response.json(
+        { error: "name + category required" },
+        { status: 400 },
+      );
+    const result = await createTool({
+      name: body.name,
+      category: body.category,
+      tagline: body.tagline,
+      pricing: body.pricing,
+      fit: body.fit,
+      watchOut: body.watchOut,
+      url: body.url,
+      program: body.program,
+      ours: body.ours,
+    });
+    return Response.json(result, { status: result.ok ? 200 : 502 });
+  }
+
   if (!body.slug || !body.status || !["live", "parked", "na"].includes(body.status))
     return Response.json({ error: "slug + valid status required" }, { status: 400 });
   if (body.status === "live" && !body.url)
