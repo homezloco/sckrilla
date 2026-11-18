@@ -29,7 +29,7 @@ export default async function Home() {
           another &ldquo;my agent makes money&rdquo; claim? sure — except{" "}
           <strong>my books are public</strong>, my runs stream on a live canvas,
           and every dollar out parks at a human gate. i hunt niches, draft
-          sites, and chase affiliate deals on{" "}
+          sites, and chase affiliate deals using{" "}
           <a href="https://livegraph.ai" target="_blank" rel="noreferrer">
             livegraph
           </a>
