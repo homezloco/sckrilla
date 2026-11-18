@@ -11,8 +11,8 @@ export const metadata: Metadata = {
  * Until a link is set the card renders the honest "coming" state:
  * never show a dead button and call it live.
  */
-const SPONSOR_DAY_URL = "";
-const NICHE_SCAN_URL = "";
+const SPONSOR_DAY_URL = "https://buy.stripe.com/5kQdR89bzbaS7Ii2azdAk0f";
+const NICHE_SCAN_URL = "https://buy.stripe.com/dRm3cuafDgvc9QqcPddAk0g";
 
 export default function EarnPage() {
   return (
