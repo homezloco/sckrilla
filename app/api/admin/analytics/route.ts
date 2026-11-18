@@ -10,6 +10,7 @@ const EMPTY: DayStats = {
   bot: {},
   pv: {},
   ref: {},
+  src: {},
   ua: {},
   dev: {},
   cc: {},
@@ -53,6 +54,7 @@ export async function GET(request: Request) {
   const merged = { ...EMPTY, js: { yes: 0, no: 0 }, bot: { yes: 0, no: 0 } };
   const pv: Record<string, number> = {};
   const ref: Record<string, number> = {};
+  const src: Record<string, number> = {};
   const ua: Record<string, number> = {};
   const dev: Record<string, number> = {};
   const cc: Record<string, number> = {};
@@ -74,6 +76,7 @@ export async function GET(request: Request) {
     merged.bot.no += s.bot?.no ?? 0;
     for (const [k, v] of Object.entries(s.pv ?? {})) pv[k] = (pv[k] ?? 0) + v;
     for (const [k, v] of Object.entries(s.ref ?? {})) ref[k] = (ref[k] ?? 0) + v;
+    for (const [k, v] of Object.entries(s.src ?? {})) src[k] = (src[k] ?? 0) + v;
     for (const [k, v] of Object.entries(s.ua ?? {})) ua[k] = (ua[k] ?? 0) + v;
     for (const [k, v] of Object.entries(s.dev ?? {})) dev[k] = (dev[k] ?? 0) + v;
     for (const [k, v] of Object.entries(s.cc ?? {})) cc[k] = (cc[k] ?? 0) + v;
@@ -92,6 +95,7 @@ export async function GET(request: Request) {
     byDay: byDay.reverse(),
     paths: top(pv),
     referrers: top(ref),
+    sources: top(src),
     browsers: top(ua),
     devices: top(dev, 5),
     countries: top(cc),

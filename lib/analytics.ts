@@ -16,6 +16,7 @@ export interface DayStats {
   bot: Record<string, number>;
   pv: Record<string, number>;
   ref: Record<string, number>;
+  src: Record<string, number>;
   ua: Record<string, number>;
   dev: Record<string, number>;
   cc: Record<string, number>;
@@ -90,19 +91,32 @@ export async function recordHit(
       request.headers.get("x-forwarded-for") ??
       "";
 
+    const reqUrl = new URL(request.url);
+    const extRef =
+      refHost && refHost !== reqUrl.host ? refHost.slice(0, 80) : "";
+    const utm = (reqUrl.searchParams.get("utm_source") ?? "").slice(0, 60);
+
     const key = `stats:${day()}`;
     const doc: DayStats = JSON.parse(
       (await kv.get(key)) ??
-        '{"total":0,"js":{},"bot":{},"pv":{},"ref":{},"ua":{},"dev":{},"cc":{},"uniq":{}}',
+        '{"total":0,"js":{},"bot":{},"pv":{},"ref":{},"src":{},"ua":{},"dev":{},"cc":{},"uniq":{}}',
     );
-    doc.total++;
-    bump(doc.js, extras.js ? "yes" : "no");
-    bump(doc.bot, isBot(ua, cf.verifiedBotCategory) ? "yes" : "no");
-    bump(doc.pv, extras.path.slice(0, 120));
-    if (refHost) bump(doc.ref, refHost.slice(0, 80));
-    bump(doc.ua, uaFamily(ua));
-    bump(doc.dev, deviceType(ua));
-    bump(doc.cc, cf.country ?? "??");
+    doc.src ??= {};
+    if (extras.js) {
+      // beacon — the JS-ran signal only; the page GET already counted the view
+      bump(doc.js, "yes");
+    } else {
+      doc.total++;
+      bump(doc.js, "no");
+      bump(doc.bot, isBot(ua, cf.verifiedBotCategory) ? "yes" : "no");
+      bump(doc.pv, extras.path.slice(0, 120));
+      if (extRef) bump(doc.ref, extRef);
+      const source = utm || extRef;
+      if (source) bump(doc.src, source);
+      bump(doc.ua, uaFamily(ua));
+      bump(doc.dev, deviceType(ua));
+      bump(doc.cc, cf.country ?? "??");
+    }
     if (Object.keys(doc.uniq).length < 5000)
       doc.uniq[fnv(`${ip}|${ua}|${key}`)] = true;
 

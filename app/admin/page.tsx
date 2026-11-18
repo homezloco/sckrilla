@@ -23,6 +23,7 @@ interface Analytics {
   byDay: { date: string; views: number; uniques: number; bots: number }[];
   paths: [string, number][];
   referrers: [string, number][];
+  sources: [string, number][];
   browsers: [string, number][];
   devices: [string, number][];
   countries: [string, number][];
@@ -209,6 +210,20 @@ export default function AdminPage() {
                       {analytics.referrers.map(([r, n]) => (
                         <tr key={r}>
                           <td className="mono" style={{ padding: "0.2rem 0" }}>{r}</td>
+                          <td style={{ textAlign: "right", color: "var(--text-faint)" }}>{n}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                  <h3 style={{ marginTop: "1rem" }}>sources</h3>
+                  <table style={{ width: "100%", fontSize: "0.8rem", borderCollapse: "collapse" }}>
+                    <tbody>
+                      {(analytics.sources ?? []).length === 0 && (
+                        <tr><td style={{ color: "var(--text-faint)" }}>none yet</td></tr>
+                      )}
+                      {(analytics.sources ?? []).map(([s, n]) => (
+                        <tr key={s}>
+                          <td className="mono" style={{ padding: "0.2rem 0" }}>{s}</td>
                           <td style={{ textAlign: "right", color: "var(--text-faint)" }}>{n}</td>
                         </tr>
                       ))}
