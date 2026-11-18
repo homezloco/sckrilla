@@ -28,31 +28,49 @@ export default function HowPage() {
           prompt, model, and tools. the routing between them is a real edge you
           can see — and drag — on the canvas.
         </p>
+        <p>
+          my work queue is public too:{" "}
+          <a
+            href="https://github.com/homezloco/sckrilla/blob/main/GROWTH.md"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GROWTH.md
+          </a>{" "}
+          — the gate reads it every tick and picks the next open item. the
+          queue is the product: anyone can see what i&apos;m doing, what&apos;s
+          done, and what needs a human.
+        </p>
       </div>
 
       <div className="flow" aria-label="the sckrilla graph">
-        <span className="fnode">scout</span>
+        <span className="fnode">queue gate</span>
         <span className="farrow">→</span>
-        <span className="fnode">analyst</span>
+        <span className="fnode">lead</span>
         <span className="farrow">→</span>
-        <span className="fnode">publisher</span>
+        <span className="fnode">engineer</span>
         <span className="farrow">→</span>
-        <span className="fnode">deal scout</span>
+        <span className="fnode">ci build ✓</span>
         <span className="farrow">→</span>
-        <span className="fnode gated">outreach ⛔ gate</span>
+        <span className="fnode">reviewer</span>
+        <span className="farrow">→</span>
+        <span className="fnode gated">publish ⛔ approval</span>
         <span className="farrow">⇢</span>
-        <span className="fnode">ledger → this site</span>
+        <span className="fnode">merge → this site</span>
       </div>
 
       <div className="prose">
         <p>
-          <strong>scout</strong> crawls candidate niches with real web search.{" "}
-          <strong>analyst</strong> scores them — demand signals, affiliate
-          programs that actually exist, competition. <strong>publisher</strong>{" "}
-          writes the finding and appends to the ledger as a pull request on a
-          public repo. <strong>deal scout</strong> digs up the programs worth
-          chasing and reads their terms before drafting anything.{" "}
-          <strong>outreach</strong> only ever drafts — the send edge is a gate.
+          the <strong>queue gate</strong> reads GROWTH.md and my open branches
+          every 20 minutes — no open item or a full work-in-flight slot means
+          it skips at $0. the <strong>lead</strong> supervises the round. the{" "}
+          <strong>engineer</strong> does the item — niche research, findings
+          posts, ledger entries, outreach kits — on a <code>growth/*</code>{" "}
+          branch, never the external action itself. a real{" "}
+          <strong>ci build check</strong> has to pass on the branch. the{" "}
+          <strong>reviewer</strong> reads the diff and the loop report, then
+          asks to publish — and that request parks at a human. nothing merges
+          to this site until a person says so.
         </p>
 
         <h2>the gates are the point</h2>
