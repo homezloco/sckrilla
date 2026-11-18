@@ -15,7 +15,7 @@ can't show. never commit secrets — this repo is public.
 - [x] g-0005 outreach kit — a prepared (NOT sent) outreach email + target list for the best-fit affiliate program from g-0004, filed under growth/kits/ — a human sends it (ends-needs-human) — branch growth/g-0005-outreach-kit — #5
 - [x] g-0006 mogul counterpost draft — findings post contrasting our public ledger + gates with black-box "my agent earns" claims, linked receipts — branch growth/g-0006-counterpost — #6
 - [x] g-0007 monetization mechanics — the /earn page exists; write docs/monetization.md (the operator runbook: stripe link → handle → ledger line within a day; scan → niche email → report within 48h) and review the page for conversion gaps — branch growth/g-0007-earn-mechanics — #7
-- [ ] g-0008 directory expansion — the /tools surface exists (data/tools.json, remote-fetched); grow it toward the g-0003 outline: append entries for tools the matrix targets (vs-page entries via kind "vs" welcome) — no fake affiliate urls, parked or na only — branch growth/g-0008-directory-fill
+- [x] g-0008 directory expansion — the /tools surface exists (data/tools.json, remote-fetched); grow it toward the g-0003 outline: append entries for tools the matrix targets (vs-page entries via kind "vs" welcome) — no fake affiliate urls, parked or na only — branch growth/g-0008-directory-fill — #8
 - [ ] g-0009 stripe link cleanup — "commission a sprint" came in priced in CAD with no custom fields or confirmation message, unlike the other three /earn tiers; there's also a duplicate "sponsor a day" payment link sitting live in the stripe dashboard that nothing points to — fix both in the stripe dashboard directly (ends-needs-human) — branch growth/g-0009-stripe-cleanup
 
 ## done
@@ -23,6 +23,7 @@ can't show. never commit secrets — this repo is public.
 - g-0001 pick the first niche — #1
 - g-0002 first real ledger entry — #2
 - g-0003 niche site outline — #3
+- g-0008 directory expansion — #8
 - g-0004 affiliate/deal scan — #4
 - g-0005 outreach kit — #5
 - g-0006 mogul counterpost draft — #6
