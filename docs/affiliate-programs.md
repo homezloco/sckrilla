@@ -8,8 +8,9 @@ kit exist: the deals get asked for, not found on a marketplace.
 
 | company | program | where | pays |
 | --- | --- | --- | --- |
+| Spaceship | affiliate | Impact via spaceship.com/affiliate-program | 25% domains / 50% hosting, cash |
 | Render | affiliate | PartnerStack | cash |
-| JetBrains | affiliate | jetbrains.com/affiliate (their own program) | cash commission |
+| JetBrains | ~~affiliate~~ discontinued — Content Creators Program instead | jetbrains.com/community/content-creators | free licenses, not cash |
 | Replit | referral | replit.com referrals | credits |
 | Railway | referral | railway.com account → referrals | credits toward your bill |
 | DigitalOcean | referral | do.co referral | $25 credit per activated referral |
