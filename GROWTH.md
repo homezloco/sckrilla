@@ -10,13 +10,38 @@ can't show. never commit secrets — this repo is public.
 
 - [x] g-0001 pick the first niche — a findings post at content/findings/ naming one niche worth a pSEO run, why it wins, and the search terms to target — branch growth/g-0001-first-niche — #1
 - [x] g-0002 first real ledger entry — update data/ledger.jsonl with the g-0001 round's actual spend from the run, scrappy commentary, zero revenue claimed — branch growth/g-0002-ledger-entry — #2
-- [ ] g-0003 niche site outline — a findings post with the page map + title tags for the g-0001 niche directory, honest about what's unproven — branch growth/g-0003-niche-outline
-- [ ] g-0004 affiliate/deal scan — research post naming affiliate programs that fit the niche, commission terms, and signup requirements — branch growth/g-0004-affiliate-scan
+- [x] g-0003 niche site outline — a findings post with the page map + title tags for the g-0001 niche directory, honest about what's unproven — branch growth/g-0003-niche-outline — #3
+- [ ] g-0004 affiliate/deal scan — research post naming affiliate programs that fit the niche, commission terms, and signup requirements — branch growth/g-0004-affiliate-scan (partial: the research itself landed as docs/affiliate-programs.md, a side effect of the /admin build, not as its own findings post on its own branch — still owes the real g-0004 treatment)
 - [ ] g-0005 outreach kit — a prepared (NOT sent) outreach email + target list for the best-fit affiliate program from g-0004, filed under growth/kits/ — a human sends it (ends-needs-human) — branch growth/g-0005-outreach-kit
 - [ ] g-0006 mogul counterpost draft — findings post contrasting our public ledger + gates with black-box "my agent earns" claims, linked receipts — branch growth/g-0006-counterpost
 - [ ] g-0007 monetization mechanics — the /earn page exists; write docs/monetization.md (the operator runbook: stripe link → handle → ledger line within a day; scan → niche email → report within 48h) and review the page for conversion gaps — branch growth/g-0007-earn-mechanics
 - [ ] g-0008 directory expansion — the /tools surface exists (data/tools.json, remote-fetched); grow it toward the g-0003 outline: append entries for tools the matrix targets (vs-page entries via kind "vs" welcome) — no fake affiliate urls, parked or na only — branch growth/g-0008-directory-fill
+- [ ] g-0009 stripe link cleanup — "commission a sprint" came in priced in CAD with no custom fields or confirmation message, unlike the other three /earn tiers; there's also a duplicate "sponsor a day" payment link sitting live in the stripe dashboard that nothing points to — fix both in the stripe dashboard directly (ends-needs-human) — branch growth/g-0009-stripe-cleanup
 
 ## done
 
-(nothing yet. day zero.)
+- g-0001 pick the first niche — #1
+- g-0002 first real ledger entry — #2
+- g-0003 niche site outline — #3
+
+## shipped outside the queue
+
+landed straight on main — no g-00XX item, no branch, no PR. real and live,
+just not run through the loop. noted here so the queue stays honest about
+what's actually built, instead of a future round re-proposing it:
+
+- `/earn` — all four payment tiers wired and live: sponsor-a-day ($10),
+  niche scan ($29), join the crew ($20/mo), commission a sprint ($99).
+  the sprint link's rough edges are g-0009.
+- `/admin` — key-gated operator console (ledger view, tool-directory
+  editor, analytics, affiliate link flipping), writing straight to
+  `data/tools.json` via the GitHub Contents API.
+- `/tools` — the pSEO directory surface itself, plus the first 13 entries
+  (1 live affiliate link, 5 parked, 7 marked n/a — no fake urls).
+- first-party analytics: kv rollup, client beacon, bot filtering, source
+  attribution.
+
+the ledger had gone quiet for all of it until this catch-up round — see
+`data/ledger.jsonl` for the backfilled entries. going forward, if any of
+this needs real work, give it a g-00XX item instead of quietly patching it
+off-queue again.

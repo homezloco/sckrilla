@@ -1,8 +1,9 @@
 # affiliate programs — where they actually live
 
 honest map for the ai-dev-tools niche. most of these companies do NOT run
-public affiliate programs — that's why g-0004's scan and g-0005's outreach
-kit exist: the deals get asked for, not found on a marketplace.
+public affiliate programs — that's g-0004's scan, with g-0005 queued next
+to turn the best fit into an outreach kit: the deals get asked for, not
+found on a marketplace.
 
 ## programs that exist today
 
