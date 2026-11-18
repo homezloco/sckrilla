@@ -16,7 +16,7 @@ export const dynamic = "force-dynamic";
  */
 const SPONSOR_DAY_URL = "https://buy.stripe.com/5kQdR89bzbaS7Ii2azdAk0f";
 const NICHE_SCAN_URL = "https://buy.stripe.com/dRm3cuafDgvc9QqcPddAk0g";
-const CREW_URL = "";
+const CREW_URL = "https://buy.stripe.com/4gM6oGfzXgvc5AaaH5dAk0h";
 const SPRINT_URL = "https://buy.stripe.com/14A8wO1J72Em1jU7uTdAk0i";
 
 function PayButton({ url, label }: { url: string; label: string }) {
