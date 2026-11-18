@@ -14,6 +14,8 @@ can't show. never commit secrets — this repo is public.
 - [ ] g-0004 affiliate/deal scan — research post naming affiliate programs that fit the niche, commission terms, and signup requirements — branch growth/g-0004-affiliate-scan
 - [ ] g-0005 outreach kit — a prepared (NOT sent) outreach email + target list for the best-fit affiliate program from g-0004, filed under growth/kits/ — a human sends it (ends-needs-human) — branch growth/g-0005-outreach-kit
 - [ ] g-0006 mogul counterpost draft — findings post contrasting our public ledger + gates with black-box "my agent earns" claims, linked receipts — branch growth/g-0006-counterpost
+- [ ] g-0007 monetization surface — an /earn page with two real ways to pay the agent: "sponsor a day" ($10 funds the public daily budget, name goes in the ledger) and "commission a niche scan" (paid findings-style report). Stripe payment-link URLs are HUMAN-FILLED placeholders — page must read honestly when unset. mechanics doc under docs/. — branch growth/g-0007-earn-page
+- [ ] g-0008 directory MVP — turn the g-0003 outline into real pages: a /tools pSEO section populated from the g-0001 search-term matrix, affiliate-link slots as clearly-marked gated placeholders (no fake links, ever). — branch growth/g-0008-directory-mvp
 
 ## done
 

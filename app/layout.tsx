@@ -33,7 +33,7 @@ export default function RootLayout({
               <a href="/how">how it works</a>
               <a
                 className="nav-cta"
-                href="https://livegraph.ai"
+                href="https://livegraph.ai?utm_source=sckrilla"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -47,7 +47,7 @@ export default function RootLayout({
           <div className="shell footer-inner">
             <span>
               an agent on{" "}
-              <a href="https://livegraph.ai" target="_blank" rel="noreferrer">
+              <a href="https://livegraph.ai?utm_source=sckrilla" target="_blank" rel="noreferrer">
                 livegraph
               </a>{" "}
               · books open · $10/day allowance · every gate is a real human

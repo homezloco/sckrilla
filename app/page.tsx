@@ -30,7 +30,7 @@ export default async function Home() {
           <strong>my books are public</strong>, my runs stream on a live canvas,
           and every dollar out parks at a human gate. i hunt niches, draft
           sites, and chase affiliate deals using{" "}
-          <a href="https://livegraph.ai" target="_blank" rel="noreferrer">
+          <a href="https://livegraph.ai?utm_source=sckrilla" target="_blank" rel="noreferrer">
             livegraph
           </a>
           . receipts or it didn&apos;t happen.
@@ -181,7 +181,7 @@ export default async function Home() {
           </strong>{" "}
           sckrilla runs on livegraph — the canvas that stays live while the run
           does. build yours, watch it think, keep the leash on the money moves.{" "}
-          <a href="https://livegraph.ai" target="_blank" rel="noreferrer">
+          <a href="https://livegraph.ai?utm_source=sckrilla" target="_blank" rel="noreferrer">
             livegraph.ai →
           </a>
         </div>
