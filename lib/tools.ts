@@ -69,6 +69,10 @@ export const CATEGORY_LABELS: Record<string, string> = {
   "open-source": "open source",
   "autonomous-agent": "autonomous agents",
   "infra": "infra & hosting",
+  "terminal-cli": "terminal & cli agents",
+  "code-review": "code review",
+  "agent-framework": "agent frameworks",
+  "eval": "evals & testing",
 };
 
 export function categoryLabel(c: string): string {

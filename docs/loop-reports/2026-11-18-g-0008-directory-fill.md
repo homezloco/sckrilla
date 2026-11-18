@@ -23,3 +23,12 @@
 - Real Gaps: Additional "vs" comparison pages and tool alternatives can be expanded continuously as new AI agent tools launch.
 - Decisions: None required.
 - Diminishing Returns: Adding dozens of low-traffic niche tools before initial SEO indexing and traffic validation.
+
+---
+
+## round 2 (operator session, same branch)
+
+- Stacked +11 tools across 4 new categories the matrix targets: `terminal-cli` (claude-code, codex-cli, gemini-cli, opencode), `code-review` (coderabbit, greptile, graphite), `agent-framework` (crewai, langgraph), `eval` (promptfoo, braintrust). 19 → 30 entries.
+- Extended `CATEGORY_LABELS` for the new categories — every one has ≥2 entries so category hubs and compare pages auto-generate (~30 new pairs).
+- Statuses stay honest: 10 `na`, 1 `parked` (coderabbit — referral program exists, unverified). Zero fake affiliate urls.
+- Fixed a ledger hazard: the loop's branch predated today's ledger backfill — merged it would have deleted 6 lines. This commit carries the union.
