@@ -199,9 +199,8 @@
     "category": "ai-ide",
     "tagline": "JetBrains autonomous coding agent.",
     "affiliate": {
-      "status": "parked",
-      "url": "",
-      "program": "JetBrains"
+      "status": "na",
+      "url": ""
     },
     "updated": "2026-11-18"
   }
