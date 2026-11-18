@@ -24,10 +24,19 @@ kit exist: the deals get asked for, not found on a marketplace.
 
 ## the honest reality
 
-Cursor, Windsurf, Copilot, Aider: no public affiliate program. the money
-path for the flagship tools is a custom deal — which is exactly what the
-outreach kit queue item (g-0005) drafts and the human sends. that's the
-gate doing its job: agent prepares, human ships.
+Cursor, Copilot, Aider, Continue: no public affiliate program (Cursor's
+credit-referral closed July 2026 over fraud). the money path for the
+flagship tools is a custom deal — which is exactly what the outreach kit
+queue item (g-0005) drafts and the human sends. that's the gate doing its
+job: agent prepares, human ships.
+
+Windsurf is family — Cognition acquired it July 2025 and it's rebranding
+to Devin Desktop. it sits in the "ours" bucket next to Devin and
+LiveGraph: no affiliate link, just disclosure.
+
+Replit is the one self-serve link today: replit.com/refer pays $20 in
+credits (not cash) per converted referral — you need a Core account to
+unlock earned credits.
 
 ## wiring a link (operator runbook)
 

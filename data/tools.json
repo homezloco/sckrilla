@@ -17,19 +17,19 @@
   },
   {
     "slug": "windsurf",
-    "name": "Windsurf",
+    "name": "Windsurf → Devin Desktop",
     "kind": "tool",
     "category": "ai-ide",
-    "tagline": "Codeium's agentic IDE — Cascade flows as the differentiator.",
-    "pricing": "free tier; Pro $15/mo",
-    "fit": "Cheaper entry than Cursor with a comparable agent loop.",
-    "watchOut": "Acquisition turmoil put the roadmap in question; check current stewardship before committing a team.",
+    "tagline": "The IDE form factor of Devin — Cognition's agentic editor, rebranding under the single Devin brand.",
+    "pricing": "free tier; Pro from $15/mo",
+    "fit": "Cascade-style flows in the editor, with ACP support for running other agents alongside.",
+    "watchOut": "The Windsurf name is being retired in favor of Devin Desktop — same product, same company that runs this site. full disclosure: this one is family.",
     "affiliate": {
-      "status": "parked",
+      "status": "na",
       "url": "",
       "program": ""
     },
-    "ours": false
+    "ours": true
   },
   {
     "slug": "github-copilot",
