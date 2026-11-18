@@ -8,7 +8,7 @@ interface Env {
   };
 }
 
-const ASSET_PREFIXES = ["/_next/", "/favicon", "/icon", "/opengraph", "/api/t"];
+const ASSET_PREFIXES = ["/_next/", "/favicon", "/icon", "/opengraph", "/api/"];
 
 /**
  * Worker entry wrapping the vinext handler: every page request logs a hit
