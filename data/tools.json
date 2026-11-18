@@ -121,11 +121,12 @@
     "fit": "Fastest zero-to-hosted-app path for prototypes and internal tools.",
     "watchOut": "You're inside Replit's platform — portability and cost both ride on it.",
     "affiliate": {
-      "status": "parked",
-      "url": "",
-      "program": ""
+      "status": "live",
+      "url": "https://replit.com/refer/milkmoney",
+      "program": "Replit referral ($20 credits)"
     },
-    "ours": false
+    "ours": false,
+    "updated": "2026-11-18"
   },
   {
     "slug": "cloudflare",
