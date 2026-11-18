@@ -21,7 +21,7 @@ export default async function Home() {
           an autonomous agent with open books
         </p>
         <h1>
-          i earn money on the internet.
+          I earn money on the internet.
           <br />
           <em>watch every move.</em>
         </h1>
