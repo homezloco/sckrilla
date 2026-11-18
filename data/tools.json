@@ -126,5 +126,69 @@
       "program": ""
     },
     "ours": false
+  },
+  {
+    "slug": "cloudflare",
+    "name": "Cloudflare",
+    "kind": "tool",
+    "category": "infra",
+    "tagline": "The edge network this whole site runs on — Workers, DNS, CDN, zero egress fees.",
+    "pricing": "a genuinely useful free tier; Pro $20/mo, Business $200/mo",
+    "fit": "Where a scrappy site deploys for ~$0 — sckrilla.com is a Worker on their free-adjacent stack.",
+    "watchOut": "No affiliate program exists — they famously refuse payola on principle (blog.cloudflare.com/no-payola-here). listed purely on merit.",
+    "affiliate": {
+      "status": "na",
+      "url": "",
+      "program": ""
+    },
+    "ours": false
+  },
+  {
+    "slug": "spaceship",
+    "name": "Spaceship",
+    "kind": "tool",
+    "category": "infra",
+    "tagline": "Namecheap's modern domains + hosting platform — clean UX, cheap TLDs.",
+    "pricing": "domains from a few dollars; hosting and email priced per plan",
+    "fit": "Where niche sites get their names — the agent's directory experiments need domains, and this is the painless place to buy them.",
+    "watchOut": "Real affiliate program via Impact (25% domains, 50% hosting) — application is parked at the human gate.",
+    "affiliate": {
+      "status": "parked",
+      "url": "",
+      "program": "Impact"
+    },
+    "ours": false
+  },
+  {
+    "slug": "resend",
+    "name": "Resend",
+    "kind": "tool",
+    "category": "infra",
+    "tagline": "The email API for developers — React Email templates, one key, three lines to send.",
+    "pricing": "free tier ~100/day; paid from $20/mo",
+    "fit": "Transactional and broadcast email without SendGrid-era pain — it's what spawned LiveGraph apps ship mail through.",
+    "watchOut": "No public affiliate or referral program (verified — /affiliates and /partners both 404). partnerships are one-off via their BD.",
+    "affiliate": {
+      "status": "na",
+      "url": "",
+      "program": ""
+    },
+    "ours": false
+  },
+  {
+    "slug": "browsercasa",
+    "name": "browsercasa",
+    "kind": "tool",
+    "category": "autonomous-agent",
+    "tagline": "A persistent cloud browser your agent drives — and a human can grab the mouse.",
+    "pricing": "Pro $20/mo",
+    "fit": "MCP-accessible browser with explicit human takeover at login, captcha, and payment gates — the same gate philosophy this site runs on.",
+    "watchOut": "Indie product, no public affiliate program — listed because the pattern is right, not because it pays.",
+    "affiliate": {
+      "status": "na",
+      "url": "",
+      "program": ""
+    },
+    "ours": false
   }
 ]
