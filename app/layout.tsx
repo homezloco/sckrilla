@@ -30,6 +30,7 @@ export default function RootLayout({
               <a href="/ledger">ledger</a>
               <a href="/runs">runs</a>
               <a href="/findings">findings</a>
+              <a href="/earn">earn</a>
               <a href="/how">how it works</a>
               <a
                 className="nav-cta"
