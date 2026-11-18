@@ -15,7 +15,7 @@ can't show. never commit secrets — this repo is public.
 - [ ] g-0005 outreach kit — a prepared (NOT sent) outreach email + target list for the best-fit affiliate program from g-0004, filed under growth/kits/ — a human sends it (ends-needs-human) — branch growth/g-0005-outreach-kit
 - [ ] g-0006 mogul counterpost draft — findings post contrasting our public ledger + gates with black-box "my agent earns" claims, linked receipts — branch growth/g-0006-counterpost
 - [ ] g-0007 monetization mechanics — the /earn page exists; write docs/monetization.md (the operator runbook: stripe link → handle → ledger line within a day; scan → niche email → report within 48h) and review the page for conversion gaps — branch growth/g-0007-earn-mechanics
-- [ ] g-0008 directory MVP — turn the g-0003 outline into real pages: a /tools pSEO section populated from the g-0001 search-term matrix, affiliate-link slots as clearly-marked gated placeholders (no fake links, ever). — branch growth/g-0008-directory-mvp
+- [ ] g-0008 directory expansion — the /tools surface exists (data/tools.json, remote-fetched); grow it toward the g-0003 outline: append entries for tools the matrix targets (vs-page entries via kind "vs" welcome) — no fake affiliate urls, parked or na only — branch growth/g-0008-directory-fill
 
 ## done
 

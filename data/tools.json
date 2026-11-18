@@ -1,0 +1,98 @@
+[
+  {
+    "slug": "cursor",
+    "name": "Cursor",
+    "kind": "tool",
+    "category": "ai-ide",
+    "tagline": "The AI-first VS Code fork that ate the category.",
+    "pricing": "free tier; Pro $20/mo, Business $40/user/mo",
+    "fit": "Best-in-class tab completion and agent mode for daily-driver coding.",
+    "watchOut": "Usage limits on fast requests; agent runs can burn through premium models fast.",
+    "affiliate": { "status": "parked", "url": "", "program": "" },
+    "ours": false
+  },
+  {
+    "slug": "windsurf",
+    "name": "Windsurf",
+    "kind": "tool",
+    "category": "ai-ide",
+    "tagline": "Codeium's agentic IDE — Cascade flows as the differentiator.",
+    "pricing": "free tier; Pro $15/mo",
+    "fit": "Cheaper entry than Cursor with a comparable agent loop.",
+    "watchOut": "Acquisition turmoil put the roadmap in question; check current stewardship before committing a team.",
+    "affiliate": { "status": "parked", "url": "", "program": "" },
+    "ours": false
+  },
+  {
+    "slug": "github-copilot",
+    "name": "GitHub Copilot",
+    "kind": "tool",
+    "category": "ai-ide",
+    "tagline": "The incumbent — completions everywhere, agents bolted on.",
+    "pricing": "$10/mo Pro; free tier for OSS/students",
+    "fit": "Lowest-friction option if you're already in the GitHub/VS Code stack.",
+    "watchOut": "Agent mode trails the AI-native IDEs; you're buying the ecosystem, not the frontier.",
+    "affiliate": { "status": "parked", "url": "", "program": "" },
+    "ours": false
+  },
+  {
+    "slug": "aider",
+    "name": "Aider",
+    "kind": "tool",
+    "category": "open-source",
+    "tagline": "Terminal-native pair programmer — git-native, model-agnostic.",
+    "pricing": "free, MIT; you pay your own token bill",
+    "fit": "The power tool for people who live in a shell and want clean commits per change.",
+    "watchOut": "No IDE chrome — it's a CLI discipline, and token costs are yours to watch.",
+    "affiliate": { "status": "parked", "url": "", "program": "" },
+    "ours": false
+  },
+  {
+    "slug": "continue-dev",
+    "name": "Continue",
+    "kind": "tool",
+    "category": "open-source",
+    "tagline": "Open-source autopilot for VS Code/JetBrains — bring any model.",
+    "pricing": "free, Apache-2.0; hosted Hub configs have paid tiers",
+    "fit": "The self-hostable answer when you want Ollama/local models or a custom stack.",
+    "watchOut": "Assembly required — quality tracks the model and config you feed it.",
+    "affiliate": { "status": "parked", "url": "", "program": "" },
+    "ours": false
+  },
+  {
+    "slug": "devin",
+    "name": "Devin",
+    "kind": "tool",
+    "category": "autonomous-agent",
+    "tagline": "The autonomous SWE — issues in, PRs out.",
+    "pricing": "usage-based",
+    "fit": "Delegating whole tasks, not autocomplete — you review diffs instead of driving keystrokes.",
+    "watchOut": "Different mental model: it replaces a task, not a keystroke. Price accordingly.",
+    "affiliate": { "status": "na", "url": "", "program": "" },
+    "ours": true
+  },
+  {
+    "slug": "livegraph",
+    "name": "LiveGraph",
+    "kind": "tool",
+    "category": "autonomous-agent",
+    "tagline": "The orchestration canvas this entire site runs on.",
+    "pricing": "free tier; usage-based",
+    "fit": "When you want to watch, gate, and steer agent runs instead of trusting a black box.",
+    "watchOut": "You're orchestrating, not buying outcomes — the leverage is in the graphs you build.",
+    "affiliate": { "status": "na", "url": "", "program": "" },
+    "ours": true
+  },
+  {
+    "slug": "replit-agent",
+    "name": "Replit Agent",
+    "kind": "tool",
+    "category": "autonomous-agent",
+    "tagline": "Prompt-to-deployed-app in the Replit cloud.",
+    "pricing": "Replit Core $25/mo + usage",
+    "fit": "Fastest zero-to-hosted-app path for prototypes and internal tools.",
+    "watchOut": "You're inside Replit's platform — portability and cost both ride on it.",
+    "affiliate": { "status": "parked", "url": "", "program": "" },
+    "ours": false
+  }
+]
