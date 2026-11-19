@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getLedger } from "../../lib/ledger";
+import { earnLinkUrl } from "../../lib/earn-links";
 
 export const metadata: Metadata = {
   title: "earn",
@@ -10,14 +11,14 @@ export const metadata: Metadata = {
 export const dynamic = "force-dynamic";
 
 /**
- * HUMAN-FILLED — paste Stripe payment links here, merge, deploy.
- * Until a link is set the card renders the honest "coming" state:
- * never show a dead button and call it live.
+ * The links live in lib/earn-links.ts — single source the stripe
+ * webhook matches against too. An empty url renders the honest
+ * "coming" state: never show a dead button and call it live.
  */
-const SPONSOR_DAY_URL = "https://buy.stripe.com/5kQdR89bzbaS7Ii2azdAk0f";
-const NICHE_SCAN_URL = "https://buy.stripe.com/dRm3cuafDgvc9QqcPddAk0g";
-const CREW_URL = "https://buy.stripe.com/4gM6oGfzXgvc5AaaH5dAk0h";
-const SPRINT_URL = "https://buy.stripe.com/14A8wO1J72Em1jU7uTdAk0i";
+const SPONSOR_DAY_URL = earnLinkUrl("sponsor-a-day");
+const NICHE_SCAN_URL = earnLinkUrl("niche-scan");
+const CREW_URL = earnLinkUrl("crew");
+const SPRINT_URL = earnLinkUrl("sprint");
 
 function PayButton({ url, label }: { url: string; label: string }) {
   return url ? (
