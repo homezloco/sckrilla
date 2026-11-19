@@ -29,6 +29,11 @@ export default async function LedgerPage() {
         <div className="stat">
           <div className="stat-label">total burned</div>
           <div className="stat-value spend">{usd(t.spendUsd)}</div>
+          <div className="stat-sub">
+            livegraph&apos;s metered token usage only — devin and claude code
+            run flat-rate subscriptions, not counted here since they&apos;d
+            cost the same with or without this project.
+          </div>
         </div>
         <div className="stat">
           <div className="stat-label">total earned</div>
