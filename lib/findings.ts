@@ -1,4 +1,5 @@
 import { marked } from "marked";
+import { getTools, type ToolEntry } from "./tools";
 
 export interface Finding {
   slug: string;
@@ -33,15 +34,52 @@ function parseFrontmatter(raw: string): { meta: Frontmatter; body: string } {
   return { meta, body: m[2] };
 }
 
-function toFinding(slug: string, raw: string): Finding {
+function escapeRegex(s: string): string {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+/**
+ * First-mention auto-linking: the first plain-text occurrence of each tool
+ * name becomes a link to its /tools/<slug> page, so every post routes readers
+ * to monetizable directory pages. Markdown links, code spans and html tags are
+ * skipped; one link per tool per post keeps it from looking like link spam.
+ */
+function linkifyTools(body: string, tools: ToolEntry[]): string {
+  const segments = body.split(
+    /(`{1,3}[\s\S]*?`{1,3}|\[[^\]]*\]\([^) \t]*\)|<[^>]+>)/g,
+  );
+  const done = new Set<string>();
+  const sorted = [...tools].sort((a, b) => b.name.length - a.name.length);
+  for (const t of sorted) {
+    if (done.has(t.slug)) continue;
+    const alt = /^[a-z]/.test(t.name)
+      ? `|${escapeRegex(t.name[0].toUpperCase() + t.name.slice(1))}`
+      : "";
+    const re = new RegExp(`\\b(?:${escapeRegex(t.name)}${alt})\\b`);
+    for (let i = 0; i < segments.length; i += 2) {
+      const m = re.exec(segments[i]);
+      if (!m) continue;
+      segments[i] = segments[i].replace(
+        re,
+        `[${m[0]}](/tools/${t.slug})`,
+      );
+      done.add(t.slug);
+      break;
+    }
+  }
+  return segments.join("");
+}
+
+function toFinding(slug: string, raw: string, tools?: ToolEntry[]): Finding {
   const { meta, body } = parseFrontmatter(raw);
+  const text = tools ? linkifyTools(body, tools) : body;
   return {
     slug,
     title: meta.title ?? slug,
     date: meta.date ?? "",
     summary: meta.summary ?? "",
-    body,
-    html: marked.parse(body, { async: false }),
+    body: text,
+    html: marked.parse(text, { async: false }),
     runId: meta.runId,
     shareToken: meta.shareToken,
   };
@@ -53,11 +91,11 @@ const bundled = import.meta.glob("../content/findings/*.md", {
   eager: true,
 }) as Record<string, string>;
 
-function bundledFindings(): Map<string, Finding> {
+function bundledFindings(tools?: ToolEntry[]): Map<string, Finding> {
   const out = new Map<string, Finding>();
   for (const [path, raw] of Object.entries(bundled)) {
     const slug = path.replace(/^.*\//, "").replace(/\.md$/, "");
-    out.set(slug, toFinding(slug, raw));
+    out.set(slug, toFinding(slug, raw, tools));
   }
   return out;
 }
@@ -78,7 +116,8 @@ let cache: { at: number; findings: Finding[] } | null = null;
  */
 export async function getFindings(): Promise<Finding[]> {
   if (cache && Date.now() - cache.at < CACHE_TTL_MS) return cache.findings;
-  const bySlug = bundledFindings();
+  const tools = await getTools().catch(() => undefined);
+  const bySlug = bundledFindings(tools);
   try {
     const res = await fetch(LIST_URL, {
       signal: AbortSignal.timeout(5000),
@@ -107,7 +146,7 @@ export async function getFindings(): Promise<Finding[]> {
       for (const r of raws) {
         if (!r) continue;
         const slug = r.n.replace(/\.md$/, "");
-        bySlug.set(slug, toFinding(slug, r.raw));
+        bySlug.set(slug, toFinding(slug, r.raw, tools));
       }
     }
   } catch {
