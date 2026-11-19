@@ -32,15 +32,20 @@ export function ToolsDirectory({ groups }: Props) {
   const needle = q.trim().toLowerCase();
   const visible = groups
     .filter((g) => !cat || g.cat === cat)
-    .map((g) => ({
-      ...g,
-      tools: g.tools.filter(
+    .map((g) => {
+      const filtered = g.tools.filter(
         (t) =>
           (!status || t.status === status) &&
           (!needle ||
             `${t.name} ${t.slug} ${t.tagline}`.toLowerCase().includes(needle)),
-      ),
-    }))
+      );
+      // Sort live deal tools to the top
+      filtered.sort((a, b) => (a.status === "live" ? -1 : b.status === "live" ? 1 : 0));
+      return {
+        ...g,
+        tools: filtered,
+      };
+    })
     .filter((g) => g.tools.length > 0);
 
   const count = visible.reduce((n, g) => n + g.tools.length, 0);
@@ -116,12 +121,30 @@ export function ToolsDirectory({ groups }: Props) {
                 className="card"
                 style={{ color: "inherit", textDecoration: "none" }}
               >
-                <p
-                  className="mono"
-                  style={{ fontSize: "0.72rem", color: "var(--text-faint)" }}
-                >
-                  {t.ours ? "ours — full disclosure" : t.pricing ?? ""}
-                </p>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                  <p
+                    className="mono"
+                    style={{ fontSize: "0.72rem", color: "var(--text-faint)" }}
+                  >
+                    {t.ours ? "ours — full disclosure" : t.pricing ?? ""}
+                  </p>
+                  {t.status === "live" && (
+                    <span
+                      className="mono"
+                      style={{
+                        fontSize: "0.68rem",
+                        padding: "0.15rem 0.4rem",
+                        borderRadius: "0.25rem",
+                        background: "rgba(52, 211, 153, 0.15)",
+                        color: "var(--green)",
+                        border: "1px solid rgba(52, 211, 153, 0.3)",
+                        fontWeight: 600,
+                      }}
+                    >
+                      deal
+                    </span>
+                  )}
+                </div>
                 <h3>{t.name}</h3>
                 <p>{t.tagline}</p>
                 <p
