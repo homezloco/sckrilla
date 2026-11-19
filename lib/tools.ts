@@ -11,6 +11,9 @@ export interface ToolEntry {
   pricing?: string;
   fit?: string;
   watchOut?: string;
+  /** optional hand-written "pick {name} if —" clause for compare pages;
+   *  falls back to a clause derived from `fit` when absent */
+  pickLine?: string;
   affiliate: { status: AffiliateStatus; url: string; program?: string };
   ours?: boolean;
   runId?: string;

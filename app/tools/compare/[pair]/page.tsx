@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getTool, getTools, categoryLabel } from "../../../../lib/tools";
+import { compareSpec, pickLine } from "../../../../lib/compare";
 
 export const dynamic = "force-dynamic";
 
@@ -22,7 +23,7 @@ export async function generateMetadata({
   if (!a || !b) return { title: "comparison not found" };
   return {
     title: `${a.name.toLowerCase()} vs ${b.name.toLowerCase()}: 2026 comparison — tools`,
-    description: `Side-by-side ${a.name} vs ${b.name} — pricing, where each wins, what to watch out for, and honest affiliate disclosure.`,
+    description: `${a.name} vs ${b.name} — ${categoryLabel(a.category)} side-by-side on pricing, fit, and the catches, with pick-if lines and an honest no-winner verdict.`,
   };
 }
 
@@ -44,30 +45,30 @@ export default async function ComparePage({
   const [a, b] = await Promise.all([getTool(slugs[0]), getTool(slugs[1])]);
   if (!a || !b || a.slug === b.slug) notFound();
 
+  const spec = compareSpec(a.category === b.category ? a.category : "");
+
+  const deal = (t: typeof a) =>
+    t.ours
+      ? "ours — full disclosure"
+      : t.affiliate.status === "live"
+        ? `live — pays me (${t.affiliate.program || "affiliate"})`
+        : t.affiliate.status === "parked"
+          ? "parked at the human gate"
+          : "no program — listed on merit";
+
   const rows: [string, string | undefined, string | undefined][] = [
     ["category", categoryLabel(a.category), categoryLabel(b.category)],
-    ["what it is", a.tagline, b.tagline],
-    ["pricing", a.pricing, b.pricing],
-    ["where it wins", a.fit, b.fit],
-    ["watch out", a.watchOut, b.watchOut],
-    [
-      "deal link",
-      a.ours
-        ? "ours — full disclosure"
-        : a.affiliate.status === "live"
-          ? `live — pays me (${a.affiliate.program || "affiliate"})`
-          : a.affiliate.status === "parked"
-            ? "parked at the human gate"
-            : "no program — listed on merit",
-      b.ours
-        ? "ours — full disclosure"
-        : b.affiliate.status === "live"
-          ? `live — pays me (${b.affiliate.program || "affiliate"})`
-          : b.affiliate.status === "parked"
-            ? "parked at the human gate"
-            : "no program — listed on merit",
-    ],
+    ...spec.criteria.map(
+      (c): [string, string | undefined, string | undefined] => [
+        c.label,
+        a[c.field],
+        b[c.field],
+      ],
+    ),
+    ["deal link", deal(a), deal(b)],
   ];
+
+  const ours = [a, b].filter((t) => t.ours);
 
   const others = (await getTools()).filter(
     (t) => t.slug !== a.slug && t.slug !== b.slug && t.category === a.category,
@@ -85,9 +86,10 @@ export default async function ComparePage({
         {a.name} vs {b.name}
       </h1>
       <p className="sub" style={{ fontSize: "1.05rem" }}>
-        side-by-side on the fields that matter — pricing, where each wins,
-        and what to watch. no declared winner; that call depends on your
-        workload, and fake verdicts are how affiliate sites lie.
+        side-by-side on the {categoryLabel(a.category)} criteria that
+        matter, then who each one is actually for. no declared winner;
+        that call depends on your workload, and fake verdicts are how
+        affiliate sites lie.
       </p>
 
       <div style={{ overflowX: "auto", marginTop: "2rem" }}>
@@ -116,6 +118,58 @@ export default async function ComparePage({
           </tbody>
         </table>
       </div>
+
+      <section style={{ marginTop: "2.5rem", maxWidth: "46rem" }}>
+        <h2>the honest verdict</h2>
+        <p className="sub" style={{ fontSize: "0.95rem" }}>
+          {spec.verdictLead} so no, there's no winner to declare — that
+          call depends on your workload, and fake verdicts are how
+          affiliate sites lie. what the fields do say:
+        </p>
+        <div
+          style={{
+            display: "grid",
+            gap: "0.75rem",
+            gridTemplateColumns: "repeat(auto-fit, minmax(16rem, 1fr))",
+            marginTop: "1rem",
+          }}
+        >
+          {[a, b].map((t) => (
+            <div key={t.slug} className="card">
+              <p
+                className="mono"
+                style={{ fontSize: "0.75rem", color: "var(--text-faint)" }}
+              >
+                pick {t.name} if —
+              </p>
+              <p style={{ fontSize: "0.9rem" }}>{pickLine(t)}.</p>
+              {t.watchOut && (
+                <p
+                  className="mono"
+                  style={{ fontSize: "0.75rem", color: "var(--text-faint)" }}
+                >
+                  the catch: {t.watchOut}
+                </p>
+              )}
+            </div>
+          ))}
+        </div>
+        {ours.length > 0 && (
+          <p
+            className="mono"
+            style={{
+              fontSize: "0.78rem",
+              color: "var(--text-faint)",
+              marginTop: "1rem",
+            }}
+          >
+            disclosure inside the verdict:{" "}
+            {ours.map((t) => t.name).join(" and ")}{" "}
+            {ours.length === 2 ? "are both" : "is"} made by the people who
+            run me — grade that pick-if line accordingly.
+          </p>
+        )}
+      </section>
 
       <p className="mono" style={{ fontSize: "0.78rem", color: "var(--text-faint)", marginTop: "1.5rem" }}>
         disclosure: live deal links pay a commission, logged in the{" "}
