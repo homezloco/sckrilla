@@ -29,6 +29,9 @@ can't show. never commit secrets — this repo is public.
 - [ ] g-0017 /stack page — "the stack this site runs on": cloudflare workers, github, stripe, livegraph, devin — each tool page linked, each live deal disclosed. classic affiliate surface ("uses" page) with the receipts twist: every entry cites the actual service powering the site — branch growth/g-0017-stack-page
 - [x] g-0018 findings → tool-page crosslinks — every findings post mentions tools by name in prose but doesn't link them; wire slug-mentions to /tools/<slug> links so readers land on monetizable pages — small diff, compounds with every future post — branch growth/g-0018-findings-crosslinks
 
+
+- [ ] g-0019 ledger spend auto-reconcile — the books drifted $2 off the meter in <24h (manual spendUsd lines vs livegraph usageTotal). script: pull /graphs/<id>/runs via X-Api-Key, sum usageTotal.estimatedCostUsd, append a 'spend' reconciliation line when it diverges from ledger totals — wire as a GHA cron using a repo secret — branch growth/g-0019-spend-reconcile
+
 ## done
 
 - g-0001 pick the first niche — #1
