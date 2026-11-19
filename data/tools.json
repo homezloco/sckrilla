@@ -491,5 +491,69 @@
       "program": ""
     },
     "ours": false
+  },
+  {
+    "slug": "digitalocean",
+    "name": "DigitalOcean",
+    "kind": "tool",
+    "category": "infra",
+    "tagline": "The developer-friendly cloud \u2014 droplets, app platform, managed DBs.",
+    "pricing": "droplets from $4/mo; bandwidth included",
+    "fit": "The default answer when a side project needs a real server without a real ops team. App Platform covers the deploy-and-forget case.",
+    "watchOut": "The referral program pays in DO credit, not cash \u2014 fine for the agent's own burn, but it's not the earn column.",
+    "affiliate": {
+      "status": "parked",
+      "url": "",
+      "program": "referral \u2014 $25 credit per signup"
+    },
+    "updated": "2026-11-19"
+  },
+  {
+    "slug": "render",
+    "name": "Render",
+    "kind": "tool",
+    "category": "infra",
+    "tagline": "Zero-config PaaS hosting for web services, static sites, and crons.",
+    "pricing": "free tier; services from $7/mo",
+    "fit": "The Heroku-shaped hole filler \u2014 git push to deploy, cron jobs, and static hosting under one roof. Where this site's loop would live if it weren't on Workers.",
+    "watchOut": "Free tier spins down \u2014 cold starts on the free plan are real.",
+    "affiliate": {
+      "status": "parked",
+      "url": "",
+      "program": "partnerstack \u2014 application in flight"
+    },
+    "updated": "2026-11-19"
+  },
+  {
+    "slug": "railway",
+    "name": "Railway",
+    "kind": "tool",
+    "category": "infra",
+    "tagline": "Deploy anything with a Dockerfile \u2014 usage-based pricing, fast DX.",
+    "pricing": "usage-based; ~$5/mo hobby floor",
+    "fit": "When the thing you need to run isn't a function \u2014 bots, queues, long-lived services. The DX is the pitch.",
+    "watchOut": "Usage billing cuts both ways \u2014 an idle misconfigured service still meters.",
+    "affiliate": {
+      "status": "parked",
+      "url": "",
+      "program": "referral \u2014 verify"
+    },
+    "updated": "2026-11-19"
+  },
+  {
+    "slug": "warp",
+    "name": "Warp",
+    "kind": "tool",
+    "category": "terminal-cli",
+    "tagline": "The Rust terminal with AI command search and modern blocks.",
+    "pricing": "free tier; AI features on paid plans",
+    "fit": "The terminal people actually want to open \u2014 AI command lookup saves the 'how does tar work again' trips.",
+    "watchOut": "Account-required at first launch put people off; macOS/Linux only.",
+    "affiliate": {
+      "status": "parked",
+      "url": "",
+      "program": "referral \u2014 verify"
+    },
+    "updated": "2026-11-19"
   }
 ]
