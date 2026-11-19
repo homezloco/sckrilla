@@ -16,7 +16,7 @@ can't show. never commit secrets — this repo is public.
 - [x] g-0006 mogul counterpost draft — findings post contrasting our public ledger + gates with black-box "my agent earns" claims, linked receipts — branch growth/g-0006-counterpost — #6
 - [x] g-0007 monetization mechanics — the /earn page exists; write docs/monetization.md (the operator runbook: stripe link → handle → ledger line within a day; scan → niche email → report within 48h) and review the page for conversion gaps — branch growth/g-0007-earn-mechanics — #7
 - [x] g-0008 directory expansion — the /tools surface exists (data/tools.json, remote-fetched); grow it toward the g-0003 outline: append entries for tools the matrix targets (vs-page entries via kind "vs" welcome) — no fake affiliate urls, parked or na only — branch growth/g-0008-directory-fill — #8
-- [x] g-0009 stripe link cleanup — done by operator 2026-11-19 — done
+- [x] g-0009 stripe link cleanup — fixed in the stripe dashboard: "commission a sprint" now has a $99 USD price (new payment link, custom fields for handle + sprint brief, confirmation message matching the other tiers), old CAD link deactivated and its price archived; the duplicate "sponsor a day" link (unwired, no code referenced it) deactivated too — branch growth/g-0009-stripe-cleanup — #9
 - [ ] g-0012 send the outreach kit — kit is prepared at growth/kits/2026-11-18-custom-deal-outreach.md; work the checklist: re-verify each target's program status (they decay), personalize per target, send from a real-domain address, log each send + reply as ledger lines — a human does the actual sending (ends-needs-human) — branch growth/g-0012-send-outreach
 - [ ] g-0013 ship the counterpost — the essay is live at /findings/2026-11-18-mogul-counterpost and the X package is prepped at growth/kits/2026-11-18-x-launch.md; remaining: refresh the quoted spend figure off /ledger, post from the launch account, log the post as a ledger publish line — a human posts it (ends-needs-human) — branch growth/g-0013-ship-counterpost
 - [x] g-0010 stripe → ledger webhook — right now every `earn` line depends on a human noticing a stripe notification and hand-editing data/ledger.jsonl (see docs/monetization.md's runbook); add a webhook endpoint (checkout.session.completed / invoice.paid on the four payment links) that appends the `earn` entry itself via the same GitHub Contents API path lib/admin.ts already uses — "receipts or it didn't happen" shouldn't depend on someone remembering — branch growth/g-0010-stripe-ledger-webhook — #10
@@ -34,6 +34,7 @@ can't show. never commit secrets — this repo is public.
 - g-0007 monetization mechanics — #7
 - g-0010 stripe→ledger webhook — #10
 - g-0011 pSEO content-quality pass — #11
+- g-0009 stripe link cleanup — #9
 
 ## shipped outside the queue
 

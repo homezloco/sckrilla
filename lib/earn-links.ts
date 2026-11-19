@@ -39,11 +39,8 @@ export const EARN_LINKS: EarnLink[] = [
     currency: "usd",
   },
   {
-    // g-0009: this link still bills CAD — swap the url when the
-    // corrected USD link exists; the webhook records the session's
-    // real currency either way.
     slug: "sprint",
-    url: "https://buy.stripe.com/14A8wO1J72Em1jU7uTdAk0i",
+    url: "https://buy.stripe.com/9B6dR81J70we8Mm7uTdAk0j",
     mode: "payment",
     amountCents: 9900,
     currency: "usd",
