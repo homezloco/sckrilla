@@ -11,6 +11,7 @@
  * Nothing reads env at import time; every secret is optional.
  */
 
+import { EARN_LINKS } from "./earn-links";
 import type { LedgerEntry } from "./ledger";
 
 const enc = new TextEncoder();
@@ -84,44 +85,21 @@ export type ProductSlug = "sponsor-a-day" | "niche-scan" | "crew" | "sprint";
 
 export interface Product {
   slug: ProductSlug;
-  /** path segment of the buy.stripe.com url in app/earn/page.tsx */
+  /** path segment of the buy.stripe.com url in lib/earn-links.ts */
   linkId: string;
   mode: "payment" | "subscription";
   amountCents: number;
   currency: string;
 }
 
-export const PRODUCTS: Product[] = [
-  {
-    slug: "sponsor-a-day",
-    linkId: "5kQdR89bzbaS7Ii2azdAk0f",
-    mode: "payment",
-    amountCents: 1000,
-    currency: "usd",
-  },
-  {
-    slug: "niche-scan",
-    linkId: "dRm3cuafDgvc9QqcPddAk0g",
-    mode: "payment",
-    amountCents: 2900,
-    currency: "usd",
-  },
-  {
-    slug: "crew",
-    linkId: "4gM6oGfzXgvc5AaaH5dAk0h",
-    mode: "subscription",
-    amountCents: 2000,
-    currency: "usd",
-  },
-  {
-    slug: "sprint",
-    linkId: "14A8wO1J72Em1jU7uTdAk0i",
-    mode: "payment",
-    amountCents: 9900,
-    // known quirk (g-0009): the sprint link is priced in CAD
-    currency: "cad",
-  },
-];
+/** derived from lib/earn-links.ts — one source, so a link swap can't desync the matcher. */
+export const PRODUCTS: Product[] = EARN_LINKS.map((l) => ({
+  slug: l.slug,
+  linkId: l.url.split("/").pop() ?? "",
+  mode: l.mode,
+  amountCents: l.amountCents,
+  currency: l.currency,
+}));
 
 interface StripeSession {
   id?: string;
@@ -157,14 +135,17 @@ export function productForSession(s: StripeSession): Product | null {
   const link = typeof s.payment_link === "string" ? s.payment_link : "";
   const byLink = PRODUCTS.find((p) => link !== "" && link.includes(p.linkId));
   if (byLink) return byLink;
+  // mode+amount first, currency only as tiebreak — g-0009's sprint link
+  // swap changes the billed currency, and the matcher must not go blind
+  // the day it happens. the earn entry records the session's real
+  // currency regardless.
   const currency = (s.currency ?? "").toLowerCase();
   const byAmount = PRODUCTS.filter(
-    (p) =>
-      p.mode === s.mode &&
-      p.amountCents === s.amount_total &&
-      p.currency === currency,
+    (p) => p.mode === s.mode && p.amountCents === s.amount_total,
   );
-  return byAmount.length === 1 ? byAmount[0] : null;
+  if (byAmount.length === 1) return byAmount[0];
+  const byCurrency = byAmount.filter((p) => p.currency === currency);
+  return byCurrency.length === 1 ? byCurrency[0] : null;
 }
 
 /* ------------------------------------------------------------------ */
