@@ -8,6 +8,7 @@
     "pricing": "free tier; Pro $20/mo, Business $40/user/mo",
     "fit": "Best-in-class tab completion and agent mode for daily-driver coding.",
     "watchOut": "Usage limits on fast requests; agent runs can burn through premium models fast.",
+    "pickLine": "you want the sharpest tab completion and agent mode in the category, and you can live inside usage metering",
     "affiliate": {
       "status": "parked",
       "url": "",
@@ -201,6 +202,7 @@
     "pricing": "JetBrains AI subscription add-on",
     "fit": "Deep integration into IntelliJ / PyCharm / WebStorm IDEs for JetBrains power users.",
     "watchOut": "Locked into JetBrains ecosystem; agentic capabilities trail standalone tools.",
+    "pickLine": "you already live in IntelliJ or PyCharm and want the agent that speaks your IDE",
     "affiliate": {
       "status": "na",
       "url": "",
@@ -318,6 +320,7 @@
     "pricing": "in Claude Pro/Max plans; API metered",
     "fit": "Deep repo work from the shell; subagents and hooks make it scriptable.",
     "watchOut": "Metered API runs add up fast on big repos; the subscription tiers carry their own caps.",
+    "pickLine": "you're already on a Claude plan and want deep, scriptable repo work from the shell",
     "affiliate": {
       "status": "na",
       "url": "",
@@ -333,6 +336,7 @@
     "tagline": "OpenAI's terminal agent \u2014 local or cloud, powered by your ChatGPT account.",
     "pricing": "in ChatGPT Plus/Pro; API metered",
     "fit": "The natural pick if your org already lives on OpenAI keys.",
+    "pickLine": "your org runs on OpenAI keys and you want the terminal agent built for them",
     "watchOut": "Sandboxing defaults decide how brave it can be \u2014 read them before letting it run unattended.",
     "affiliate": {
       "status": "na",
