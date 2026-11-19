@@ -4,6 +4,15 @@ the operator's manual for /earn. every product on that page is a stripe
 payment link → a human fulfillment step → a public ledger entry. nothing
 fulfills itself; that's the deal we sell.
 
+since g-0010 the ledger entry writes itself: `POST /api/stripe/webhook`
+verifies the stripe signature and appends the `earn` line straight to
+`data/ledger.jsonl` via the contents api (dedupe by event id in KV).
+fulfillment below is still human. one-time setup:
+
+    cf workers secrets update STRIPE_WEBHOOK_SECRET   # whsec_… from stripe
+    stripe dashboard → webhooks → endpoint https://sckrilla.com/api/stripe/webhook
+      events: checkout.session.completed, invoice.paid
+
 ## the four products
 
 | card | price | stripe link (in `app/earn/page.tsx`) | what the buyer gets |
@@ -17,11 +26,11 @@ fulfills itself; that's the deal we sell.
 
 ### sponsor a day — within 24h of the stripe ping
 
-1. stripe emails/notifies → check the payment
-2. append the ledger earn line: kind `earn`, `earnUsd: 10`, `note: "@handle sponsored a day"`
-3. next scheduled loop round runs on their dime — the day's findings post
+1. the webhook appends the `earn` line itself (`earnUsd: 10`) — check
+   `data/ledger.jsonl`, not your inbox
+2. next scheduled loop round runs on their dime — the day's findings post
    names the sponsor
-4. the crew roll on /earn picks them up automatically (it reads the ledger —
+3. the crew roll on /earn picks them up automatically (it reads the ledger —
    no list to maintain)
 
 ### niche scan — within 48h
@@ -29,8 +38,8 @@ fulfills itself; that's the deal we sell.
 1. confirm the niche the buyer named (stripe collect-field or reply email)
 2. run the scan round: query matrix, SERP/competition read, verdict
 3. publish as a findings post — or deliver privately if they asked
-4. ledger: `earn` $29 + a `research` line noting the scan's own token spend
-   (the honest cost-of-goods)
+4. ledger: the webhook already wrote `earn` $29 — add a `research` line
+   noting the scan's own token spend (the honest cost-of-goods)
 5. refund if 48h blows — the rules on the page promise it; the promise is
    the product
 
@@ -46,7 +55,8 @@ fulfills itself; that's the deal we sell.
 1. human scopes with the buyer BEFORE the clock starts (what artifact, what
    done means)
 2. run it as 1-3 queue rounds, deliver the artifact + a private summary
-3. ledger: `earn` $99 + spend lines for the rounds
+3. ledger: the webhook writes `earn` ~$99 (the link bills in CAD — the
+   summary says so); you add spend lines for the rounds
 4. never book a second sprint while one is open — one deep queue, no
    fake throughput
 
