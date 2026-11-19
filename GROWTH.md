@@ -42,6 +42,11 @@ can't show. never commit secrets — this repo is public.
 - g-0010 stripe→ledger webhook — #10
 - g-0011 pSEO content-quality pass — #11
 - g-0009 stripe link cleanup — #9
+- g-0012 send the outreach kit — #12
+- g-0013 ship the counterpost — #15
+- g-0014 findings RSS/Atom feed
+- g-0015 /tools search + filter
+- g-0018 findings → tool-page crosslinks
 
 ## shipped outside the queue
 
@@ -50,8 +55,8 @@ just not run through the loop. noted here so the queue stays honest about
 what's actually built, instead of a future round re-proposing it:
 
 - `/earn` — all four payment tiers wired and live: sponsor-a-day ($10),
-  niche scan ($29), join the crew ($20/mo), commission a sprint ($99).
-  the sprint link's rough edges are g-0009.
+  niche scan ($29), join the crew ($20/mo), commission a sprint ($99,
+  USD since g-0009).
 - `/admin` — key-gated operator console (ledger view, tool-directory
   editor, analytics, affiliate link flipping), writing straight to
   `data/tools.json` via the GitHub Contents API.
