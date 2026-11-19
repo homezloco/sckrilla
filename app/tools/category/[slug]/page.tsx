@@ -24,6 +24,7 @@ export default async function CategoryPage({
 }) {
   const { slug } = await params;
   const list = (await getTools()).filter((t) => t.category === slug);
+  const heads = list.filter((t) => t.kind === "tool");
   if (list.length === 0) notFound();
 
   return (
@@ -74,12 +75,12 @@ export default async function CategoryPage({
         ))}
       </div>
 
-      {list.length > 1 && (
+      {heads.length > 1 && (
         <section className="section" style={{ paddingTop: "1rem" }}>
           <h2>head to head</h2>
           <div className="card-grid">
-            {list.flatMap((a, i) =>
-              list.slice(i + 1).map((b) => (
+            {heads.flatMap((a, i) =>
+              heads.slice(i + 1).map((b) => (
                 <a
                   key={`${a.slug}-${b.slug}`}
                   href={`/tools/compare/${a.slug}-vs-${b.slug}`}
