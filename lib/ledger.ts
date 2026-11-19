@@ -20,6 +20,8 @@ export interface LedgerEntry {
   spendUsd?: number;
   earnUsd?: number;
   note?: string;
+  /** stripe session/invoice id on earn lines written by /api/stripe/webhook — dedupe + audit trail */
+  stripeSessionId?: string;
 }
 
 const REMOTE_URL =
