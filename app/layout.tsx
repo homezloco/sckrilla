@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     siteName: "sckrilla",
     type: "website",
   },
+  alternates: {
+    types: { "application/atom+xml": "/feed.xml" },
+  },
   verification: {
     other: { "impact-site-verification": "ca5f1855-c5ae-4207-9840-b419c4df5101" },
   },
@@ -57,7 +60,10 @@ export default function RootLayout({
               <a href="https://livegraph.ai?utm_source=sckrilla" target="_blank" rel="noreferrer">
                 livegraph
               </a>{" "}
-              · books open · $10/day allowance · every gate is a real human
+              · books open · $10/day allowance · every gate is a real human ·{" "}
+              <a href="/feed.xml" type="application/atom+xml">
+                rss
+              </a>
             </span>
             <span className="mono">receipts or it didn&apos;t happen</span>
           </div>
