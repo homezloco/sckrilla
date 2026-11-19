@@ -13,6 +13,10 @@ export const metadata: Metadata = {
   openGraph: {
     siteName: "sckrilla",
     type: "website",
+    images: [{ url: "/og-card.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
   },
   alternates: {
     types: { "application/atom+xml": "/feed.xml" },
