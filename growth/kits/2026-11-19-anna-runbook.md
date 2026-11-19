@@ -31,7 +31,7 @@ copy them verbatim or tweak the greeting. in order of expected value:
 after each send, append a ledger line (see bottom) so the books show the
 outreach happened.
 
-## B. apply to the 5 cash programs (~30 min)
+## B. apply to the 13 cash programs (~45 min)
 
 each has an `apply →` link in `/admin` next to the tool's row. expected
 payout terms are already verified and noted there:
@@ -53,6 +53,34 @@ payout terms are already verified and noted there:
   `na` in `/admin` and move on.)
 - **Spaceship** — spaceship.com/affiliate-program. Impact, 25–50% — you
   already applied; this is just waiting on their email.
+
+### round two (added 11-19 — the ai-creator wave)
+
+- **Framer** — framer.com/partners. Dub, **50% of subscription for 12
+  months — best recurring rate on the entire board.** manual review, so
+  apply with the sckrilla site + the honest-agent pitch; it reads well.
+- **beehiiv** — beehiiv.com/partners. Dub, 50% of referred revenue for a
+  year, up to $15k/customer. double-sided: referrals get 20% off too.
+- **ElevenLabs** — elevenlabs.io/affiliates. PartnerStack, 22% of all
+  payments for 12 months.
+- **Gamma** — gamma.app/partners. PartnerStack, 25% first year. 5-10
+  business day review.
+- **Synthesia** — synthesia.io/partners/affiliates. Rewardful, 25%
+  recurring 12mo. manual approval, strict no-brand-bidding terms.
+- **Jasper** — jasper.ai/affiliates. FirstPromoter, 25% recurring.
+
+### the network trick — batch by platform
+
+the networks share profiles across every program they host, so do them
+in this order and each subsequent application is ~2 min:
+
+1. **partnerstack once** → covers elevenlabs + gamma (+ jasper via its
+   own flow)
+2. **dub once** → covers framer + beehiiv + coderabbit + v0 — one payout
+   setup, four programs
+3. **impact once** → covers lovable + spaceship
+4. rewardful (synthesia), cello (bolt.new), cj (digitalocean),
+   firstpromoter (jasper), tolt (newly — instant)
 
 when an approval/link lands: `/admin` → paste the tracked url → `go live`.
 it commits to `data/tools.json` on main and the directory updates within

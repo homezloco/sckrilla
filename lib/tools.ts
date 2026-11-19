@@ -83,6 +83,7 @@ export const CATEGORY_LABELS: Record<string, string> = {
   "code-review": "code review",
   "agent-framework": "agent frameworks",
   "eval": "evals & testing",
+  "ai-creator": "ai creator & marketing tools",
 };
 
 export function categoryLabel(c: string): string {

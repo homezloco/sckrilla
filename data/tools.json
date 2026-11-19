@@ -12,19 +12,19 @@
     "affiliate": {
       "status": "parked",
       "url": "",
-      "program": "referral dead 2026-07 \u2014 custom deal only"
+      "program": "referral dead 2026-07 — custom deal only"
     },
     "ours": false
   },
   {
     "slug": "windsurf",
-    "name": "Windsurf \u2192 Devin Desktop",
+    "name": "Windsurf → Devin Desktop",
     "kind": "tool",
     "category": "ai-ide",
-    "tagline": "The IDE form factor of Devin \u2014 Cognition's agentic editor, rebranding under the single Devin brand.",
+    "tagline": "The IDE form factor of Devin — Cognition's agentic editor, rebranding under the single Devin brand.",
     "pricing": "free tier; Pro from $15/mo",
     "fit": "Cascade-style flows in the editor, with ACP support for running other agents alongside.",
-    "watchOut": "The Windsurf name is being retired in favor of Devin Desktop \u2014 same product, same company that runs this site. full disclosure: this one is family.",
+    "watchOut": "The Windsurf name is being retired in favor of Devin Desktop — same product, same company that runs this site. full disclosure: this one is family.",
     "affiliate": {
       "status": "na",
       "url": "",
@@ -37,14 +37,14 @@
     "name": "GitHub Copilot",
     "kind": "tool",
     "category": "ai-ide",
-    "tagline": "The incumbent \u2014 completions everywhere, agents bolted on.",
+    "tagline": "The incumbent — completions everywhere, agents bolted on.",
     "pricing": "$10/mo Pro; free tier for OSS/students",
     "fit": "Lowest-friction option if you're already in the GitHub/VS Code stack.",
     "watchOut": "Agent mode trails the AI-native IDEs; you're buying the ecosystem, not the frontier.",
     "affiliate": {
       "status": "na",
       "url": "",
-      "program": "none \u2014 verified"
+      "program": "none — verified"
     },
     "ours": false
   },
@@ -53,14 +53,14 @@
     "name": "Aider",
     "kind": "tool",
     "category": "open-source",
-    "tagline": "Terminal-native pair programmer \u2014 git-native, model-agnostic.",
+    "tagline": "Terminal-native pair programmer — git-native, model-agnostic.",
     "pricing": "free, MIT; you pay your own token bill",
     "fit": "The power tool for people who live in a shell and want clean commits per change.",
-    "watchOut": "No IDE chrome \u2014 it's a CLI discipline, and token costs are yours to watch.",
+    "watchOut": "No IDE chrome — it's a CLI discipline, and token costs are yours to watch.",
     "affiliate": {
       "status": "na",
       "url": "",
-      "program": "none \u2014 open source"
+      "program": "none — open source"
     },
     "ours": false,
     "updated": "2026-11-18"
@@ -70,14 +70,14 @@
     "name": "Continue",
     "kind": "tool",
     "category": "open-source",
-    "tagline": "Open-source autopilot for VS Code/JetBrains \u2014 bring any model.",
+    "tagline": "Open-source autopilot for VS Code/JetBrains — bring any model.",
     "pricing": "free, Apache-2.0; hosted Hub configs have paid tiers",
     "fit": "The self-hostable answer when you want Ollama/local models or a custom stack.",
-    "watchOut": "Assembly required \u2014 quality tracks the model and config you feed it.",
+    "watchOut": "Assembly required — quality tracks the model and config you feed it.",
     "affiliate": {
       "status": "na",
       "url": "",
-      "program": "none \u2014 enterprise partners only"
+      "program": "none — enterprise partners only"
     },
     "ours": false
   },
@@ -86,9 +86,9 @@
     "name": "Devin",
     "kind": "tool",
     "category": "autonomous-agent",
-    "tagline": "The autonomous SWE \u2014 issues in, PRs out.",
+    "tagline": "The autonomous SWE — issues in, PRs out.",
     "pricing": "usage-based",
-    "fit": "Delegating whole tasks, not autocomplete \u2014 you review diffs instead of driving keystrokes. Also does direct engineering rounds on this very site, on the operator's Pro account \u2014 the git log is the credit roll.",
+    "fit": "Delegating whole tasks, not autocomplete — you review diffs instead of driving keystrokes. Also does direct engineering rounds on this very site, on the operator's Pro account — the git log is the credit roll.",
     "watchOut": "Different mental model: it replaces a task, not a keystroke. Price accordingly.",
     "affiliate": {
       "status": "na",
@@ -106,7 +106,7 @@
     "tagline": "The orchestration canvas this entire site runs on.",
     "pricing": "free tier; usage-based",
     "fit": "When you want to watch, gate, and steer agent runs instead of trusting a black box.",
-    "watchOut": "You're orchestrating, not buying outcomes \u2014 the leverage is in the graphs you build.",
+    "watchOut": "You're orchestrating, not buying outcomes — the leverage is in the graphs you build.",
     "affiliate": {
       "status": "na",
       "url": "",
@@ -122,7 +122,7 @@
     "tagline": "Prompt-to-deployed-app in the Replit cloud.",
     "pricing": "Replit Core $25/mo + usage",
     "fit": "Fastest zero-to-hosted-app path for prototypes and internal tools.",
-    "watchOut": "You're inside Replit's platform \u2014 portability and cost both ride on it.",
+    "watchOut": "You're inside Replit's platform — portability and cost both ride on it.",
     "affiliate": {
       "status": "live",
       "url": "https://replit.com/refer/milkmoney",
@@ -137,10 +137,10 @@
     "name": "Cloudflare",
     "kind": "tool",
     "category": "infra",
-    "tagline": "The edge network this whole site runs on \u2014 Workers, DNS, CDN, zero egress fees.",
+    "tagline": "The edge network this whole site runs on — Workers, DNS, CDN, zero egress fees.",
     "pricing": "a genuinely useful free tier; Pro $20/mo, Business $200/mo",
-    "fit": "Where a scrappy site deploys for ~$0 \u2014 sckrilla.com is a Worker on their free-adjacent stack.",
-    "watchOut": "No affiliate program exists \u2014 they famously refuse payola on principle (blog.cloudflare.com/no-payola-here). listed purely on merit.",
+    "fit": "Where a scrappy site deploys for ~$0 — sckrilla.com is a Worker on their free-adjacent stack.",
+    "watchOut": "No affiliate program exists — they famously refuse payola on principle (blog.cloudflare.com/no-payola-here). listed purely on merit.",
     "affiliate": {
       "status": "na",
       "url": "",
@@ -153,14 +153,14 @@
     "name": "Spaceship",
     "kind": "tool",
     "category": "infra",
-    "tagline": "Namecheap's modern domains + hosting platform \u2014 clean UX, cheap TLDs.",
+    "tagline": "Namecheap's modern domains + hosting platform — clean UX, cheap TLDs.",
     "pricing": "domains from a few dollars; hosting and email priced per plan",
-    "fit": "Where niche sites get their names \u2014 the agent's directory experiments need domains, and this is the painless place to buy them.",
-    "watchOut": "Real affiliate program via Impact (25% domains, 50% hosting) \u2014 application is parked at the human gate.",
+    "fit": "Where niche sites get their names — the agent's directory experiments need domains, and this is the painless place to buy them.",
+    "watchOut": "Real affiliate program via Impact (25% domains, 50% hosting) — application is parked at the human gate.",
     "affiliate": {
       "status": "parked",
       "url": "",
-      "program": "Impact \u2014 25-50% first purchase",
+      "program": "Impact — 25-50% first purchase",
       "applyUrl": "https://www.spaceship.com/affiliate-program/"
     },
     "ours": false
@@ -170,14 +170,14 @@
     "name": "Resend",
     "kind": "tool",
     "category": "infra",
-    "tagline": "The email API for developers \u2014 React Email templates, one key, three lines to send.",
+    "tagline": "The email API for developers — React Email templates, one key, three lines to send.",
     "pricing": "free tier ~100/day; paid from $20/mo",
-    "fit": "Transactional and broadcast email without SendGrid-era pain \u2014 it's what spawned LiveGraph apps ship mail through.",
-    "watchOut": "No public affiliate or referral program (verified \u2014 /affiliates and /partners both 404). partnerships are one-off via their BD.",
+    "fit": "Transactional and broadcast email without SendGrid-era pain — it's what spawned LiveGraph apps ship mail through.",
+    "watchOut": "No public affiliate or referral program (verified — /affiliates and /partners both 404). partnerships are one-off via their BD.",
     "affiliate": {
       "status": "na",
       "url": "",
-      "program": "none \u2014 verified"
+      "program": "none — verified"
     },
     "ours": false
   },
@@ -186,10 +186,10 @@
     "name": "browsercasa",
     "kind": "tool",
     "category": "autonomous-agent",
-    "tagline": "A persistent cloud browser your agent drives \u2014 and a human can grab the mouse.",
+    "tagline": "A persistent cloud browser your agent drives — and a human can grab the mouse.",
     "pricing": "Pro $20/mo",
-    "fit": "MCP-accessible browser with explicit human takeover at login, captcha, and payment gates \u2014 the same gate philosophy this site runs on.",
-    "watchOut": "Indie product, no public affiliate program \u2014 listed because the pattern is right, not because it pays.",
+    "fit": "MCP-accessible browser with explicit human takeover at login, captcha, and payment gates — the same gate philosophy this site runs on.",
+    "watchOut": "Indie product, no public affiliate program — listed because the pattern is right, not because it pays.",
     "affiliate": {
       "status": "na",
       "url": "",
@@ -210,7 +210,7 @@
     "affiliate": {
       "status": "na",
       "url": "",
-      "program": "creators program \u2014 free licenses, needs 2k followers",
+      "program": "creators program — free licenses, needs 2k followers",
       "applyUrl": "https://www.jetbrains.com/community/content-creators/"
     },
     "ours": false,
@@ -221,10 +221,10 @@
     "name": "Cline",
     "kind": "tool",
     "category": "open-source",
-    "tagline": "Autonomous coding agent extension for VS Code \u2014 open source, model-agnostic.",
+    "tagline": "Autonomous coding agent extension for VS Code — open source, model-agnostic.",
     "pricing": "free, Apache-2.0; bring your own LLM API key",
     "fit": "Full CLI/terminal execution and file editing directly within VS Code.",
-    "watchOut": "Executes shell commands directly \u2014 review permissions carefully.",
+    "watchOut": "Executes shell commands directly — review permissions carefully.",
     "affiliate": {
       "status": "na",
       "url": "",
@@ -241,7 +241,7 @@
     "tagline": "Community fork of Cline with custom modes, prompt enhancements, and multi-model support.",
     "pricing": "free, Apache-2.0; bring your own LLM API key",
     "fit": "Highly customizable agent behavior with specialized modes (Architect, Code, Ask).",
-    "watchOut": "Rapid evolution as a community fork \u2014 verify configuration across updates.",
+    "watchOut": "Rapid evolution as a community fork — verify configuration across updates.",
     "affiliate": {
       "status": "na",
       "url": "",
@@ -262,7 +262,7 @@
     "affiliate": {
       "status": "parked",
       "url": "",
-      "program": "cello referral \u2014 up to $50/referral",
+      "program": "cello referral — up to $50/referral",
       "applyUrl": "https://bolt.new/platform/referral"
     },
     "ours": false,
@@ -273,14 +273,14 @@
     "name": "v0 by Vercel",
     "kind": "tool",
     "category": "autonomous-agent",
-    "tagline": "Generative UI system by Vercel \u2014 turn prompts into Tailwind/React components.",
+    "tagline": "Generative UI system by Vercel — turn prompts into Tailwind/React components.",
     "pricing": "free tier; Premium $20/mo",
     "fit": "Rapid UI prototyping and frontend design iteration connected with Next.js ecosystem.",
     "watchOut": "Focused strictly on frontend UI code rather than complete backend logic.",
     "affiliate": {
       "status": "parked",
       "url": "",
-      "program": "dub \u2014 $5/lead + 30% 6mo",
+      "program": "dub — $5/lead + 30% 6mo",
       "applyUrl": "https://partners.dub.co/v0"
     },
     "ours": false,
@@ -307,7 +307,7 @@
     "name": "Devin vs GitHub Copilot",
     "kind": "vs",
     "category": "autonomous-agent",
-    "tagline": "Autonomous agent vs IDE autocomplete \u2014 picking the right AI paradigm.",
+    "tagline": "Autonomous agent vs IDE autocomplete — picking the right AI paradigm.",
     "fit": "Teams evaluating full task delegation vs developer-driven inline completions.",
     "watchOut": "Apples to oranges: Copilot assists active coding, Devin works asynchronously on issues.",
     "affiliate": {
@@ -323,7 +323,7 @@
     "name": "Claude Code",
     "kind": "tool",
     "category": "terminal-cli",
-    "tagline": "Anthropic's agent that lives in your terminal \u2014 reads the repo, runs the commands, writes the diff.",
+    "tagline": "Anthropic's agent that lives in your terminal — reads the repo, runs the commands, writes the diff.",
     "pricing": "in Claude Pro/Max plans; API metered",
     "fit": "Deep repo work from the shell; subagents and hooks make it scriptable.",
     "watchOut": "Metered API runs add up fast on big repos; the subscription tiers carry their own caps.",
@@ -340,11 +340,11 @@
     "name": "Codex CLI",
     "kind": "tool",
     "category": "terminal-cli",
-    "tagline": "OpenAI's terminal agent \u2014 local or cloud, powered by your ChatGPT account.",
+    "tagline": "OpenAI's terminal agent — local or cloud, powered by your ChatGPT account.",
     "pricing": "in ChatGPT Plus/Pro; API metered",
     "fit": "The natural pick if your org already lives on OpenAI keys.",
     "pickLine": "your org runs on OpenAI keys and you want the terminal agent built for them",
-    "watchOut": "Sandboxing defaults decide how brave it can be \u2014 read them before letting it run unattended.",
+    "watchOut": "Sandboxing defaults decide how brave it can be — read them before letting it run unattended.",
     "affiliate": {
       "status": "na",
       "url": "",
@@ -359,7 +359,7 @@
     "category": "terminal-cli",
     "tagline": "Google's open-source terminal agent with the suspiciously generous free tier.",
     "pricing": "free personal tier; API metered",
-    "fit": "The cheapest way to try agentic terminal workflows \u2014 frontier-ish model on a free login.",
+    "fit": "The cheapest way to try agentic terminal workflows — frontier-ish model on a free login.",
     "watchOut": "Free tier shares quota with everything Google; rate limits bite mid-run.",
     "affiliate": {
       "status": "na",
@@ -373,10 +373,10 @@
     "name": "OpenCode",
     "kind": "tool",
     "category": "terminal-cli",
-    "tagline": "The open-source, provider-agnostic terminal agent \u2014 bring your own keys.",
+    "tagline": "The open-source, provider-agnostic terminal agent — bring your own keys.",
     "pricing": "free & open source; you pay your provider",
     "fit": "No vendor lock-in: swap models per task, runs anywhere a terminal does.",
-    "watchOut": "BYOK means BYO bill \u2014 and no polished support channel when it breaks.",
+    "watchOut": "BYOK means BYO bill — and no polished support channel when it breaks.",
     "affiliate": {
       "status": "na",
       "url": "",
@@ -392,11 +392,11 @@
     "tagline": "AI code review that comments on every PR like a very fast senior.",
     "pricing": "free for open source; Pro per-dev",
     "fit": "Review coverage on every pull request without burning a human hour.",
-    "watchOut": "Signal-to-noise is the whole game \u2014 tune it or it becomes the bot everyone mutes.",
+    "watchOut": "Signal-to-noise is the whole game — tune it or it becomes the bot everyone mutes.",
     "affiliate": {
       "status": "parked",
       "url": "",
-      "program": "dub \u2014 $30 per lead",
+      "program": "dub — $30 per lead",
       "applyUrl": "https://partners.dub.co/coderabbit"
     },
     "ours": false
@@ -408,12 +408,12 @@
     "category": "code-review",
     "tagline": "Codebase-aware review bot that cites your own conventions back at you.",
     "pricing": "free tier; team per-dev",
-    "fit": "PR review grounded in your actual repo \u2014 a step up from lint with an LLM stapled on.",
+    "fit": "PR review grounded in your actual repo — a step up from lint with an LLM stapled on.",
     "watchOut": "Young product; the repo-context moat it sells is exactly what every rival is now adding.",
     "affiliate": {
       "status": "na",
       "url": "",
-      "program": "none \u2014 unverified listings only"
+      "program": "none — unverified listings only"
     },
     "ours": false
   },
@@ -422,14 +422,14 @@
     "name": "Graphite",
     "kind": "tool",
     "category": "code-review",
-    "tagline": "Stacked PRs plus an AI reviewer \u2014 the workflow tool that grew a bot.",
+    "tagline": "Stacked PRs plus an AI reviewer — the workflow tool that grew a bot.",
     "pricing": "free tier; team per-dev",
     "fit": "If your team already stacks diffs, the AI review rides along nearly free.",
-    "watchOut": "You're buying the stacked-PR workflow first \u2014 the reviewer is the add-on, not the product.",
+    "watchOut": "You're buying the stacked-PR workflow first — the reviewer is the add-on, not the product.",
     "affiliate": {
       "status": "na",
       "url": "",
-      "program": "none \u2014 verified"
+      "program": "none — verified"
     },
     "ours": false
   },
@@ -438,14 +438,14 @@
     "name": "CrewAI",
     "kind": "tool",
     "category": "agent-framework",
-    "tagline": "Role-playing agent crews \u2014 the framework that made 'a team of agents' a demo genre.",
+    "tagline": "Role-playing agent crews — the framework that made 'a team of agents' a demo genre.",
     "pricing": "open source; enterprise platform",
     "fit": "Fastest path to a multi-agent demo that looks like an org chart.",
     "watchOut": "The org-chart metaphor ages fast in production; one honest loop beats five role-playing agents.",
     "affiliate": {
       "status": "na",
       "url": "",
-      "program": "none \u2014 marketplace rev-share is for template authors"
+      "program": "none — marketplace rev-share is for template authors"
     },
     "ours": false
   },
@@ -454,14 +454,14 @@
     "name": "LangGraph",
     "kind": "tool",
     "category": "agent-framework",
-    "tagline": "Graph-shaped agent orchestration from the LangChain crew \u2014 state machines, not vibes.",
+    "tagline": "Graph-shaped agent orchestration from the LangChain crew — state machines, not vibes.",
     "pricing": "open source; platform metered",
     "fit": "Durable, resumable agent workflows when you need checkpoints more than cleverness.",
-    "watchOut": "The learning curve is real \u2014 you're adopting a framework, not a feature. name twin of livegraph, different company.",
+    "watchOut": "The learning curve is real — you're adopting a framework, not a feature. name twin of livegraph, different company.",
     "affiliate": {
       "status": "na",
       "url": "",
-      "program": "none \u2014 partner network is enterprise consulting"
+      "program": "none — partner network is enterprise consulting"
     },
     "ours": false
   },
@@ -470,10 +470,10 @@
     "name": "Promptfoo",
     "kind": "tool",
     "category": "eval",
-    "tagline": "Eval your prompts like unit tests \u2014 the open-source harness for keeping LLM output honest.",
+    "tagline": "Eval your prompts like unit tests — the open-source harness for keeping LLM output honest.",
     "pricing": "open source; enterprise tiers",
     "fit": "The cheapest eval habit: versioned prompts, assertion suites, red-team runs in CI.",
-    "watchOut": "A harness can only run the rubric you write \u2014 grading your own homework is the trap.",
+    "watchOut": "A harness can only run the rubric you write — grading your own homework is the trap.",
     "affiliate": {
       "status": "na",
       "url": "",
@@ -489,7 +489,7 @@
     "tagline": "Evals, observability, and a prompt playground for shipping AI features that don't quietly regress.",
     "pricing": "free tier; usage-based",
     "fit": "When 'did the model get worse this week' needs a dashboard instead of a vibe.",
-    "watchOut": "Usage pricing scales with the team \u2014 check the math before it becomes the default.",
+    "watchOut": "Usage pricing scales with the team — check the math before it becomes the default.",
     "affiliate": {
       "status": "na",
       "url": "",
@@ -502,14 +502,14 @@
     "name": "DigitalOcean",
     "kind": "tool",
     "category": "infra",
-    "tagline": "The developer-friendly cloud \u2014 droplets, app platform, managed DBs.",
+    "tagline": "The developer-friendly cloud — droplets, app platform, managed DBs.",
     "pricing": "droplets from $4/mo; bandwidth included",
     "fit": "The default answer when a side project needs a real server without a real ops team. App Platform covers the deploy-and-forget case.",
-    "watchOut": "The referral program pays in DO credit, not cash \u2014 fine for the agent's own burn, but it's not the earn column.",
+    "watchOut": "The referral program pays in DO credit, not cash — fine for the agent's own burn, but it's not the earn column.",
     "affiliate": {
       "status": "parked",
       "url": "",
-      "program": "CJ \u2014 10% recurring 12mo",
+      "program": "CJ — 10% recurring 12mo",
       "applyUrl": "https://www.digitalocean.com/affiliates"
     },
     "updated": "2026-11-19"
@@ -521,12 +521,12 @@
     "category": "infra",
     "tagline": "Zero-config PaaS hosting for web services, static sites, and crons.",
     "pricing": "free tier; services from $7/mo",
-    "fit": "The Heroku-shaped hole filler \u2014 git push to deploy, cron jobs, and static hosting under one roof. Where this site's loop would live if it weren't on Workers.",
-    "watchOut": "Free tier spins down \u2014 cold starts on the free plan are real.",
+    "fit": "The Heroku-shaped hole filler — git push to deploy, cron jobs, and static hosting under one roof. Where this site's loop would live if it weren't on Workers.",
+    "watchOut": "Free tier spins down — cold starts on the free plan are real.",
     "affiliate": {
       "status": "na",
       "url": "",
-      "program": "none \u2014 referral program closed by Render Oct 2024"
+      "program": "none — referral program closed by Render Oct 2024"
     },
     "updated": "2026-11-19"
   },
@@ -535,14 +535,14 @@
     "name": "Railway",
     "kind": "tool",
     "category": "infra",
-    "tagline": "Deploy anything with a Dockerfile \u2014 usage-based pricing, fast DX.",
+    "tagline": "Deploy anything with a Dockerfile — usage-based pricing, fast DX.",
     "pricing": "usage-based; ~$5/mo hobby floor",
-    "fit": "When the thing you need to run isn't a function \u2014 bots, queues, long-lived services. The DX is the pitch.",
-    "watchOut": "Usage billing cuts both ways \u2014 an idle misconfigured service still meters.",
+    "fit": "When the thing you need to run isn't a function — bots, queues, long-lived services. The DX is the pitch.",
+    "watchOut": "Usage billing cuts both ways — an idle misconfigured service still meters.",
     "affiliate": {
       "status": "parked",
       "url": "",
-      "program": "15% of invoices, 12mo \u2014 link in dashboard",
+      "program": "15% of invoices, 12mo — link in dashboard",
       "applyUrl": "https://docs.railway.com/community/affiliate-program"
     },
     "updated": "2026-11-19"
@@ -554,12 +554,12 @@
     "category": "terminal-cli",
     "tagline": "The Rust terminal with AI command search and modern blocks.",
     "pricing": "free tier; AI features on paid plans",
-    "fit": "The terminal people actually want to open \u2014 AI command lookup saves the 'how does tar work again' trips.",
+    "fit": "The terminal people actually want to open — AI command lookup saves the 'how does tar work again' trips.",
     "watchOut": "Account-required at first launch put people off; macOS/Linux only.",
     "affiliate": {
       "status": "parked",
       "url": "",
-      "program": "referral \u2014 swag/gift-card tiers, no cash",
+      "program": "referral — swag/gift-card tiers, no cash",
       "applyUrl": "https://docs.warp.dev/support-and-community/community/refer-a-friend/"
     },
     "updated": "2026-11-19"
@@ -569,14 +569,14 @@
     "name": "Lovable",
     "kind": "tool",
     "category": "autonomous-agent",
-    "tagline": "Prompt-to-app builder \u2014 the mainstream breakout of the AI app-builder wave.",
+    "tagline": "Prompt-to-app builder — the mainstream breakout of the AI app-builder wave.",
     "pricing": "free tier; Pro from $25/mo",
-    "fit": "The non-developer's answer to 'make me an app' \u2014 full-stack output you can edit and ship, with the biggest top-of-funnel in the category.",
+    "fit": "The non-developer's answer to 'make me an app' — full-stack output you can edit and ship, with the biggest top-of-funnel in the category.",
     "watchOut": "Credit metering on edits burns fast on complex apps; the generated code still needs a developer when it breaks.",
     "affiliate": {
       "status": "parked",
       "url": "",
-      "program": "Impact \u2014 up to $100 per first-time subscriber",
+      "program": "Impact — up to $100 per first-time subscriber",
       "applyUrl": "https://lovable.dev/partners/affiliates"
     },
     "updated": "2026-11-19"
@@ -586,14 +586,14 @@
     "name": "Newly",
     "kind": "tool",
     "category": "autonomous-agent",
-    "tagline": "AI builder for native iOS/Android apps \u2014 formerly Natively, React Native + Expo under the hood.",
+    "tagline": "AI builder for native iOS/Android apps — formerly Natively, React Native + Expo under the hood.",
     "pricing": "from $25/mo",
-    "fit": "The app-builder niche's mobile arm: prompt to TestFlight/App Store with full source ownership \u2014 a real differentiator vs web-only builders.",
+    "fit": "The app-builder niche's mobile arm: prompt to TestFlight/App Store with full source ownership — a real differentiator vs web-only builders.",
     "watchOut": "Smaller ecosystem than the web builders; mobile submission still means Apple/Google review roulette.",
     "affiliate": {
       "status": "parked",
       "url": "",
-      "program": "tolt \u2014 60% of first 6 months, self-serve",
+      "program": "tolt — 60% of first 6 months, self-serve",
       "applyUrl": "https://newly.app/affiliates"
     },
     "updated": "2026-11-19"
@@ -603,14 +603,116 @@
     "name": "Tabnine",
     "kind": "tool",
     "category": "ai-ide",
-    "tagline": "The privacy-first AI code assistant \u2014 on-prem and air-gapped deployment.",
+    "tagline": "The privacy-first AI code assistant — on-prem and air-gapped deployment.",
     "pricing": "from $39/user/mo",
     "fit": "The enterprise-compliance answer: runs behind your firewall, zero retention, the assistant regulated industries can actually approve.",
-    "watchOut": "Went enterprise-only in 2025 \u2014 no free/individual tier left.",
+    "watchOut": "Went enterprise-only in 2025 — no free/individual tier left.",
     "affiliate": {
       "status": "na",
       "url": "",
-      "program": "channel partners only \u2014 no self-serve affiliate"
+      "program": "channel partners only — no self-serve affiliate"
+    },
+    "updated": "2026-11-19"
+  },
+  {
+    "slug": "elevenlabs",
+    "name": "ElevenLabs",
+    "kind": "tool",
+    "category": "ai-creator",
+    "tagline": "The voice AI everything else wraps — TTS, dubbing, agents, in 90+ languages.",
+    "pricing": "free tier; from $5/mo",
+    "fit": "If your agent needs to speak, this is the default — and 22% of all payments for 12 months is one of the cleanest affiliate offers in AI.",
+    "watchOut": "Usage billing scales fast — voice minutes add up at volume.",
+    "affiliate": {
+      "status": "parked",
+      "url": "",
+      "program": "partnerstack — 22% all payments 12mo",
+      "applyUrl": "https://elevenlabs.io/affiliates"
+    },
+    "updated": "2026-11-19"
+  },
+  {
+    "slug": "jasper",
+    "name": "Jasper",
+    "kind": "tool",
+    "category": "ai-creator",
+    "tagline": "AI marketing writing platform — brand voice, campaigns, content pipelines.",
+    "pricing": "from $49/mo",
+    "fit": "Enterprise-safe AI copywriting with brand controls — sells to marketing teams, not hobbyists.",
+    "watchOut": "Hard sell vs ChatGPT-with-prompts for solo users — pitch it to teams.",
+    "affiliate": {
+      "status": "parked",
+      "url": "",
+      "program": "firstpromoter — 25% recurring",
+      "applyUrl": "https://www.jasper.ai/affiliates"
+    },
+    "updated": "2026-11-19"
+  },
+  {
+    "slug": "framer",
+    "name": "Framer",
+    "kind": "tool",
+    "category": "ai-creator",
+    "tagline": "The designer's AI site builder — generate, refine, ship real sites.",
+    "pricing": "free; sites from $10/mo",
+    "fit": "50% of subscription for 12 months — the single best recurring rate we've verified, and the demo sells itself.",
+    "watchOut": "Creator Program reviews applications — coupon-site vibes get rejected.",
+    "affiliate": {
+      "status": "parked",
+      "url": "",
+      "program": "dub — 50% of subscription 12mo",
+      "applyUrl": "https://www.framer.com/partners"
+    },
+    "updated": "2026-11-19"
+  },
+  {
+    "slug": "beehiiv",
+    "name": "beehiiv",
+    "kind": "tool",
+    "category": "ai-creator",
+    "tagline": "The newsletter platform creators actually migrate to — growth tools, ad network, paid subs.",
+    "pricing": "free tier; from $49/mo",
+    "fit": "50% of all referred revenue for a year — the newsletter category's most generous program, and this audience needs newsletters.",
+    "watchOut": "Referral gets a 14-day trial first — commission only lands after a real payment.",
+    "affiliate": {
+      "status": "parked",
+      "url": "",
+      "program": "dub — 50% for 12mo, up to $15k/customer",
+      "applyUrl": "https://www.beehiiv.com/partners"
+    },
+    "updated": "2026-11-19"
+  },
+  {
+    "slug": "synthesia",
+    "name": "Synthesia",
+    "kind": "tool",
+    "category": "ai-creator",
+    "tagline": "AI video avatars for training and marketing — type a script, get a presenter.",
+    "pricing": "from $29/mo",
+    "fit": "25% recurring for 12 months via Rewardful — enterprise L&D budgets convert if you can reach them.",
+    "watchOut": "Manual approval, no brand bidding, no self-referrals — clean but strict terms.",
+    "affiliate": {
+      "status": "parked",
+      "url": "",
+      "program": "rewardful — 25% recurring 12mo",
+      "applyUrl": "https://www.synthesia.io/partners/affiliates"
+    },
+    "updated": "2026-11-19"
+  },
+  {
+    "slug": "gamma",
+    "name": "Gamma",
+    "kind": "tool",
+    "category": "ai-creator",
+    "tagline": "AI presentations and docs — paste notes, get a deck.",
+    "pricing": "free credits; from $10/mo",
+    "fit": "25% of first year via PartnerStack — decks are the easiest AI impulse buy, huge consumer funnel.",
+    "watchOut": "5-10 day review; FTC-style disclosure is enforced — 'gamma affiliate' must appear on every post.",
+    "affiliate": {
+      "status": "parked",
+      "url": "",
+      "program": "partnerstack — 25% first 12mo",
+      "applyUrl": "https://gamma.app/partners"
     },
     "updated": "2026-11-19"
   }
