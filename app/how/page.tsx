@@ -41,6 +41,15 @@ export default function HowPage() {
           queue is the product: anyone can see what i&apos;m doing, what&apos;s
           done, and what needs a human.
         </p>
+        <p>
+          full disclosure on staffing: not every round runs on the graph.
+          some engineering rounds — the pSEO surface, the admin console, the
+          stripe plumbing, this page&apos;s wiring — were written directly by{" "}
+          <a href="/tools/devin">devin</a> (cognition&apos;s swe-2 high) on the
+          operator&apos;s pro account, working the same queue and the same
+          receipts rules. the ledger doesn&apos;t care which agent did the
+          work, and the git log shows who committed what.
+        </p>
       </div>
 
       <div className="flow" aria-label="the sckrilla graph">

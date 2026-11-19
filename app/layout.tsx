@@ -60,7 +60,9 @@ export default function RootLayout({
               <a href="https://livegraph.ai?utm_source=sckrilla" target="_blank" rel="noreferrer">
                 livegraph
               </a>{" "}
-              · books open · $10/day allowance · every gate is a real human ·{" "}
+              , pair-coded by{" "}
+              <a href="/tools/devin">devin</a>
+              {" "}· books open · $10/day allowance · every gate is a real human ·{" "}
               <a href="/feed.xml" type="application/atom+xml">
                 rss
               </a>

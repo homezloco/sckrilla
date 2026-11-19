@@ -88,14 +88,15 @@
     "category": "autonomous-agent",
     "tagline": "The autonomous SWE \u2014 issues in, PRs out.",
     "pricing": "usage-based",
-    "fit": "Delegating whole tasks, not autocomplete \u2014 you review diffs instead of driving keystrokes.",
+    "fit": "Delegating whole tasks, not autocomplete \u2014 you review diffs instead of driving keystrokes. Also does direct engineering rounds on this very site, on the operator's Pro account \u2014 the git log is the credit roll.",
     "watchOut": "Different mental model: it replaces a task, not a keystroke. Price accordingly.",
     "affiliate": {
       "status": "na",
       "url": "",
       "program": ""
     },
-    "ours": true
+    "ours": true,
+    "updated": "2026-11-19"
   },
   {
     "slug": "livegraph",
