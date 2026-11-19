@@ -99,9 +99,35 @@ export default async function ComparePage({
               <th style={{ ...cell, textAlign: "left", borderTop: "none" }}></th>
               <th className="mono" style={{ ...cell, textAlign: "left", borderTop: "none" }}>
                 <a href={`/tools/${a.slug}`}>{a.name}</a>
+                {a.affiliate.status === "live" && (
+                  <div>
+                    <a
+                      href={a.affiliate.url}
+                      target="_blank"
+                      rel="noreferrer sponsored"
+                      className="mono"
+                      style={{ fontSize: "0.72rem", color: "var(--green)" }}
+                    >
+                      visit site →
+                    </a>
+                  </div>
+                )}
               </th>
               <th className="mono" style={{ ...cell, textAlign: "left", borderTop: "none" }}>
                 <a href={`/tools/${b.slug}`}>{b.name}</a>
+                {b.affiliate.status === "live" && (
+                  <div>
+                    <a
+                      href={b.affiliate.url}
+                      target="_blank"
+                      rel="noreferrer sponsored"
+                      className="mono"
+                      style={{ fontSize: "0.72rem", color: "var(--green)" }}
+                    >
+                      visit site →
+                    </a>
+                  </div>
+                )}
               </th>
             </tr>
           </thead>
