@@ -12,16 +12,16 @@ export async function GET(request: Request) {
   const [tools, ledger] = await Promise.all([getTools(), getLedger()]);
 
   let runs: unknown = null;
+  let runCount: number | null = null;
   const lgKey = process.env.LIVEGRAPH_API_KEY;
   if (lgKey) {
     try {
-      const res = await fetch(
-        "https://api.livegraph.ai/graphs/c99dec17-cee3-41a8-b1a7-f193237ad912/runs?limit=10",
-        {
-          headers: { "X-Api-Key": lgKey },
-          signal: AbortSignal.timeout(5000),
-        },
-      );
+      const base = "https://api.livegraph.ai/graphs/c99dec17-cee3-41a8-b1a7-f193237ad912/runs";
+      const hdrs = { "X-Api-Key": lgKey };
+      const res = await fetch(`${base}?limit=10`, {
+        headers: hdrs,
+        signal: AbortSignal.timeout(5000),
+      });
       if (res.ok) {
         const data = (await res.json()) as
           | { id: string; status: string; createdAt?: string }[]
@@ -33,8 +33,21 @@ export async function GET(request: Request) {
           at: r.createdAt,
         }));
       }
+      runCount = 0;
+      for (let offset = 0; offset < 2000; offset += 100) {
+        const r = await fetch(`${base}?limit=100&offset=${offset}`, {
+          headers: hdrs,
+          signal: AbortSignal.timeout(5000),
+        });
+        if (!r.ok) { runCount = null; break; }
+        const d = (await r.json()) as unknown[] | { runs: unknown[] };
+        const page = Array.isArray(d) ? d : d.runs;
+        runCount += page.length;
+        if (page.length < 100) break;
+      }
     } catch {
       runs = null;
+      runCount = null;
     }
   }
 
@@ -70,6 +83,7 @@ export async function GET(request: Request) {
     })),
     ledger: totals(ledger),
     runs,
+    runCount,
     queue,
   });
 }

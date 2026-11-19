@@ -40,6 +40,7 @@ interface State {
     gates: { parked: number; approved: number; approvedEdit: number; rejected: number; humanTouched: number };
   };
   runs: RunRow[] | null;
+  runCount: number | null;
   queue: { open: string[] } | null;
 }
 
@@ -167,8 +168,8 @@ export default function AdminPage() {
               <strong>{usd(state.ledger.earnUsd)}</strong>
             </div>
             <div>
-              <p className="mono" style={{ fontSize: "0.7rem", color: "var(--text-faint)" }}>runs</p>
-              <strong>{state.ledger.runs}</strong>
+              <p className="mono" style={{ fontSize: "0.7rem", color: "var(--text-faint)" }}>livegraph runs</p>
+              <strong>{state.runCount ?? state.ledger.runs}</strong>
             </div>
             <div>
               <p className="mono" style={{ fontSize: "0.7rem", color: "var(--text-faint)" }}>gates touched</p>
