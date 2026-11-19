@@ -161,6 +161,7 @@ export async function updateToolAffiliate(
   const idx = tools.findIndex((t) => t.slug === slug);
   if (idx === -1) return { ok: false, error: `no tool ${slug}` };
   tools[idx].affiliate = {
+    ...tools[idx].affiliate,
     status,
     url,
     ...(program ? { program } : {}),
@@ -184,6 +185,7 @@ export interface NewToolInput {
   watchOut?: string;
   url?: string;
   program?: string;
+  applyUrl?: string;
   ours?: boolean;
 }
 
@@ -221,6 +223,7 @@ export async function createTool(
       status,
       url: input.url ?? "",
       ...(input.program ? { program: input.program } : {}),
+      ...(input.applyUrl ? { applyUrl: input.applyUrl } : {}),
     },
     ...(input.ours ? { ours: true } : {}),
     updated: new Date().toISOString().slice(0, 10),

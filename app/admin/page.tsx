@@ -9,6 +9,7 @@ interface ToolRow {
   status: "live" | "parked" | "na";
   url: string;
   program: string;
+  applyUrl: string;
   ours: boolean;
 }
 
@@ -339,6 +340,18 @@ export default function AdminPage() {
                   >
                     {t.status}
                   </span>
+                  <a
+                    className="mono"
+                    style={{ fontSize: "0.7rem", color: "var(--text-faint)" }}
+                    href={
+                      t.applyUrl ||
+                      `https://www.google.com/search?q=${encodeURIComponent(`${t.name} affiliate program`)}`
+                    }
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {t.applyUrl ? "apply →" : "find program ↗"}
+                  </a>
                   <input
                     type="url"
                     placeholder="affiliate url"

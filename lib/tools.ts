@@ -14,7 +14,14 @@ export interface ToolEntry {
   /** optional hand-written "pick {name} if —" clause for compare pages;
    *  falls back to a clause derived from `fit` when absent */
   pickLine?: string;
-  affiliate: { status: AffiliateStatus; url: string; program?: string };
+  affiliate: {
+    status: AffiliateStatus;
+    url: string;
+    program?: string;
+    /** signup page for the program, when one is verified — powers the
+     *  admin "apply →" shortcut. never an affiliate url itself. */
+    applyUrl?: string;
+  };
   ours?: boolean;
   runId?: string;
   updated?: string;

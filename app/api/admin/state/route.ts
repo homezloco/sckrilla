@@ -65,6 +65,7 @@ export async function GET(request: Request) {
       status: t.affiliate.status,
       url: t.affiliate.url,
       program: t.affiliate.program ?? "",
+      applyUrl: t.affiliate.applyUrl ?? "",
       ours: t.ours ?? false,
     })),
     ledger: totals(ledger),

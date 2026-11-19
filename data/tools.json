@@ -124,7 +124,8 @@
     "affiliate": {
       "status": "live",
       "url": "https://replit.com/refer/milkmoney",
-      "program": "Replit referral ($20 credits)"
+      "program": "Replit referral ($20 credits)",
+      "applyUrl": "https://replit.com/refer"
     },
     "ours": false,
     "updated": "2026-11-18"
@@ -157,7 +158,8 @@
     "affiliate": {
       "status": "parked",
       "url": "",
-      "program": "Impact"
+      "program": "Impact",
+      "applyUrl": "https://www.spaceship.com/affiliate-program/"
     },
     "ours": false
   },
@@ -206,7 +208,8 @@
     "affiliate": {
       "status": "na",
       "url": "",
-      "program": ""
+      "program": "",
+      "applyUrl": "https://www.jetbrains.com/community/content-creators/"
     },
     "ours": false,
     "updated": "2026-11-18"
