@@ -10,11 +10,12 @@
     "watchOut": "Usage limits on fast requests; agent runs can burn through premium models fast.",
     "pickLine": "you want the sharpest tab completion and agent mode in the category, and you can live inside usage metering",
     "affiliate": {
-      "status": "parked",
+      "status": "na",
       "url": "",
-      "program": "referral dead 2026-07 — custom deal only"
+      "program": "none — referral program dead since 2026-07, confirmed independently 2026-11-19 (openaffiliate.dev lists it discontinued). custom-deal outreach only, pursued separately via g-0012"
     },
-    "ours": false
+    "ours": false,
+    "updated": "2026-11-19"
   },
   {
     "slug": "windsurf",
