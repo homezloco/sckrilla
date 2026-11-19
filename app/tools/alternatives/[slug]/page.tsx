@@ -31,6 +31,7 @@ export default async function AlternativesPage({
   const alts = (await getTools()).filter(
     (x) => x.slug !== t.slug && x.category === t.category,
   );
+  alts.sort((a, b) => (a.affiliate.status === "live" ? -1 : b.affiliate.status === "live" ? 1 : 0));
 
   return (
     <article className="section">
@@ -62,12 +63,30 @@ export default async function AlternativesPage({
               className="card"
               style={{ color: "inherit", textDecoration: "none" }}
             >
-              <p
-                className="mono"
-                style={{ fontSize: "0.72rem", color: "var(--text-faint)" }}
-              >
-                {x.ours ? "ours — full disclosure" : x.pricing ?? ""}
-              </p>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                <p
+                  className="mono"
+                  style={{ fontSize: "0.72rem", color: "var(--text-faint)" }}
+                >
+                  {x.ours ? "ours — full disclosure" : x.pricing ?? ""}
+                </p>
+                {x.affiliate.status === "live" && (
+                  <span
+                    className="mono"
+                    style={{
+                      fontSize: "0.68rem",
+                      padding: "0.15rem 0.4rem",
+                      borderRadius: "0.25rem",
+                      background: "rgba(52, 211, 153, 0.15)",
+                      color: "var(--green)",
+                      border: "1px solid rgba(52, 211, 153, 0.3)",
+                      fontWeight: 600,
+                    }}
+                  >
+                    deal
+                  </span>
+                )}
+              </div>
               <h3>{x.name}</h3>
               <p>{x.tagline}</p>
               <p
