@@ -27,7 +27,7 @@ can't show. never commit secrets — this repo is public.
 - [ ] g-0022 prepare the betalist submission kit (directory) — acceptance is a growth/ledger/ receipt and growth/kits/ file with site description, founder quote, and asset references ending in account-creation and posting steps a human still has to do (ends-needs-human)
 - [ ] g-0023 prepare the launch screenshots asset kit (assets) — acceptance is updated high-resolution application screenshots stored under growth/assets/ for /tools, /earn, and /findings along with an asset catalog file
 - [ ] g-0024 verify the custom deal outreach status (backlinks) — acceptance is a growth/ledger/ receipt recording the listing_verify verdict for outreach responses and updated affiliate status
-- [ ] g-0020 prepare the saashub submission kit (directory) — acceptance is a growth/ledger/ receipt and growth/kits/ file containing category tags, product summary, and feature bullet points ending in NEEDS HUMAN account steps
+- [ ] g-0020 prepare the saashub submission kit (directory) — acceptance is a growth/ledger/ receipt and growth/kits/ file containing category tags, product summary, and feature bullet points ending in account-creation and posting steps a human still has to do (ends-needs-human)
 
 
 - [x] g-0016 /tools deals surface — with live links landing (railway first), the directory should sell them: sort live-deal tools to the top of their category + a small "deal" badge on the card; the compare/alternatives pages already show status but could link the outbound url too. keep the honest disclosure copy — branch growth/g-0016-deals-surface
