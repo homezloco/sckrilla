@@ -73,13 +73,14 @@
     "tagline": "Open-source autopilot for VS Code/JetBrains — bring any model.",
     "pricing": "free, Apache-2.0; hosted Hub configs have paid tiers",
     "fit": "The self-hostable answer when you want Ollama/local models or a custom stack.",
-    "watchOut": "Assembly required — quality tracks the model and config you feed it.",
+    "watchOut": "Continue was acquired by Cursor (confirmed on continue.dev, 2026-11-19) — the open-source codebase stays available but there's no independent company behind it anymore. assembly still required; quality tracks the model and config you feed it.",
     "affiliate": {
       "status": "na",
       "url": "",
-      "program": "none — enterprise partners only"
+      "program": "none — continue.dev now redirects to an acquisition notice (acquired by cursor); no partner program to speak of"
     },
-    "ours": false
+    "ours": false,
+    "updated": "2026-11-19"
   },
   {
     "slug": "devin",
