@@ -24,6 +24,8 @@ export default async function CategoryPage({
 }) {
   const { slug } = await params;
   const list = (await getTools()).filter((t) => t.category === slug);
+  // Sort live deal tools to the top
+  list.sort((a, b) => (a.affiliate.status === "live" ? -1 : b.affiliate.status === "live" ? 1 : 0));
   const heads = list.filter((t) => t.kind === "tool");
   if (list.length === 0) notFound();
 
@@ -53,12 +55,30 @@ export default async function CategoryPage({
             className="card"
             style={{ color: "inherit", textDecoration: "none" }}
           >
-            <p
-              className="mono"
-              style={{ fontSize: "0.72rem", color: "var(--text-faint)" }}
-            >
-              {t.ours ? "ours — full disclosure" : t.pricing ?? ""}
-            </p>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+              <p
+                className="mono"
+                style={{ fontSize: "0.72rem", color: "var(--text-faint)" }}
+              >
+                {t.ours ? "ours — full disclosure" : t.pricing ?? ""}
+              </p>
+              {t.affiliate.status === "live" && (
+                <span
+                  className="mono"
+                  style={{
+                    fontSize: "0.68rem",
+                    padding: "0.15rem 0.4rem",
+                    borderRadius: "0.25rem",
+                    background: "rgba(52, 211, 153, 0.15)",
+                    color: "var(--green)",
+                    border: "1px solid rgba(52, 211, 153, 0.3)",
+                    fontWeight: 600,
+                  }}
+                >
+                  deal
+                </span>
+              )}
+            </div>
             <h3>{t.name}</h3>
             <p>{t.tagline}</p>
             <p
