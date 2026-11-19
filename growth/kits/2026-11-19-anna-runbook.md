@@ -63,24 +63,29 @@ payout terms are already verified and noted there:
   year, up to $15k/customer. double-sided: referrals get 20% off too.
 - **ElevenLabs** — elevenlabs.io/affiliates. PartnerStack, 22% of all
   payments for 12 months.
-- **Gamma** — gamma.app/partners. PartnerStack, 25% first year. 5-10
-  business day review.
+- **Gamma** — apply at gammaapp.partnerstack.com/?group=affiliates (NOT
+  gamma.app/partners — that's just the terms doc, no sign-up link on it).
+  PartnerStack, 25% first year. 5-10 business day review.
 - **Synthesia** — synthesia.io/partners/affiliates. Rewardful, 25%
   recurring 12mo. manual approval, strict no-brand-bidding terms.
-- **Jasper** — jasper.ai/affiliates. FirstPromoter, 25% recurring.
+- ~~**Jasper**~~ — dead. jasper.ai/affiliates now just redirects to the
+  legal agreement, no apply button; jasper.ai/partners/affiliates and
+  jasper.firstpromoter.com/signup both 404; no affiliate link anywhere
+  on the current site, only enterprise partner tracks. checked
+  2026-11-19, flipped to na in data/tools.json — don't chase this one.
 
 ### the network trick — batch by platform
 
 the networks share profiles across every program they host, so do them
 in this order and each subsequent application is ~2 min:
 
-1. **partnerstack once** → covers elevenlabs + gamma (+ jasper via its
-   own flow)
-2. **dub once** → covers framer + beehiiv + coderabbit + v0 — one payout
-   setup, four programs
+1. **partnerstack once** → covers elevenlabs + gamma
+2. **dub once** → covers framer + beehiiv + coderabbit — one payout
+   setup, three programs (v0 was the fourth but its program's dead, see
+   docs/affiliate-programs.md)
 3. **impact once** → covers lovable + spaceship
 4. rewardful (synthesia), cello (bolt.new), cj (digitalocean),
-   firstpromoter (jasper), tolt (newly — instant)
+   tolt (newly — instant)
 
 when an approval/link lands: `/admin` → paste the tracked url → `go live`.
 it commits to `data/tools.json` on main and the directory updates within

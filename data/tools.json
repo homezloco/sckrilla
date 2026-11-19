@@ -642,10 +642,9 @@
     "fit": "Enterprise-safe AI copywriting with brand controls — sells to marketing teams, not hobbyists.",
     "watchOut": "Hard sell vs ChatGPT-with-prompts for solo users — pitch it to teams.",
     "affiliate": {
-      "status": "parked",
+      "status": "na",
       "url": "",
-      "program": "firstpromoter — 25% recurring",
-      "applyUrl": "https://www.jasper.ai/affiliates"
+      "program": "unclear — jasper.ai/affiliates now just redirects to the legal agreement (no apply button); jasper.ai/partners/affiliates and jasper.firstpromoter.com/signup both 404. no affiliate link anywhere on the current site, only enterprise solutions/tech partner tracks. checked 2026-11-19, couldn't find a live apply path"
     },
     "updated": "2026-11-19"
   },
@@ -713,7 +712,7 @@
       "status": "parked",
       "url": "",
       "program": "partnerstack — 25% first 12mo",
-      "applyUrl": "https://gamma.app/partners"
+      "applyUrl": "https://gammaapp.partnerstack.com/?group=affiliates"
     },
     "updated": "2026-11-19"
   }
