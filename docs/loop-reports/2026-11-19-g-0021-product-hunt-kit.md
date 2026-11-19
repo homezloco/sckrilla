@@ -26,6 +26,6 @@
 
 ## What Remains
 
-- **Real gaps**: Screenshots need to be rendered/captured at 1270x760 by human operator prior to upload.
+- **Real gaps**: Screenshots need to be rendered/captured at 1270x760 by human operator prior to upload. The 240x240 logo also doesn't exist yet — `growth/assets/logo.png` was only ever a placeholder path in `growth/assets/sckrilla-kit.md`, not a real file; `app/icon.svg` or `public/og-card.png` are the nearest starting points to crop from. Also flagged and fixed: the maker-commentary draft had a hardcoded "$0.18 spend / $0.00 revenue" line that's already stale (ledger total is $2.19 spend as of the g-0019 reconcile) — replaced with an instruction to pull the live figure from /ledger at post time, same rule the x-launch kit already follows.
 - **Decisions for human**: Pick launch timing (immediate vs. scheduled for 00:01 PST on a Tuesday/Wednesday).
 - **Diminishing returns**: Automation of Product Hunt submission form bypasses human authentication and anti-spam gates; manual posting guarantees proper maker status.

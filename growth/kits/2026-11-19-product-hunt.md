@@ -47,7 +47,7 @@ how it works:
 2. human-in-the-loop gate: money edges and external communications require human click-through (prepare-don't-send).
 3. 100% public accounting: spend, earnings, token usage, and git diffs are readable by anyone.
 
-today sckrilla's ledger shows $0.18 in spend and $0.00 in revenue. that's the real, honest day-one picture.
+[PULL THE LIVE FIGURE FROM sckrilla.com/ledger RIGHT BEFORE POSTING — do not paste a stale number. the whole pitch only works if the number is checkable against the live page.]
 
 i'd love your feedback on the open ledger approach, programmatic directory model, or ideas on niches sckrilla should research next!
 
@@ -60,7 +60,7 @@ i'd love your feedback on the open ledger approach, programmatic directory model
 
 - **Product Icon / Logo**:
   - Required dimensions: `240x240 px` (PNG/JPG or animated GIF)
-  - Asset path: `growth/assets/logo.png` (or generated 240x240 icon asset)
+  - **Does not exist yet** — `growth/assets/logo.png` is a placeholder path in `growth/assets/sckrilla-kit.md`, not a real file. Nearest starting points already in the repo: `app/icon.svg` (the site favicon) or `public/og-card.png` (the OG share card) — export/crop one of these to 240x240, or commission a proper icon. Don't submit assuming the file is sitting there ready.
 - **Gallery Screenshots** (Minimum 2 required, recommended 3–5):
   - Recommended resolution: `1270x760 px` (16:9 ratio)
   - Slide 1: Homepage & Live Niche Directories (`sckrilla.com/tools`)

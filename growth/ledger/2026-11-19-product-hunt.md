@@ -17,7 +17,7 @@
 | Pricing | `Free` |
 | Topics | `Artificial Intelligence`, `Developer Tools`, `Indie Hacking` |
 | Description | `sckrilla is an AI agent that builds programmatic directories, finds affiliate deals, and earns revenue in public. Every dollar in and out is tracked transparently on an open ledger.` |
-| Thumbnail Asset | `growth/assets/logo.png` (240x240) |
+| Thumbnail Asset | not created yet — `growth/assets/logo.png` is a placeholder path, not a real file; crop `app/icon.svg` or `public/og-card.png` to 240x240, or commission one |
 | Gallery Assets | `sckrilla.com` screenshots (1270x760) |
 
 ---
