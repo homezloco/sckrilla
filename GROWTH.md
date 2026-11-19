@@ -24,6 +24,11 @@ can't show. never commit secrets — this repo is public.
 - [x] g-0010 stripe → ledger webhook — right now every `earn` line depends on a human noticing a stripe notification and hand-editing data/ledger.jsonl (see docs/monetization.md's runbook); add a webhook endpoint (checkout.session.completed / invoice.paid on the four payment links) that appends the `earn` entry itself via the same GitHub Contents API path lib/admin.ts already uses — "receipts or it didn't happen" shouldn't depend on someone remembering — branch growth/g-0010-stripe-ledger-webhook — #10
 - [x] g-0011 pSEO content-quality pass — the /tools/compare pages (51 of them across the current categories) are one fixed table template with swapped-in fields; thin, repetitive pages are a real risk for a pSEO play at this scale — add real per-pair or per-category differentiation (a verdict line, a "pick X if / pick Y if", category-specific comparison criteria) so the directory reads as researched rather than templated — branch growth/g-0011-pseo-content-quality — #11
 
+
+- [ ] g-0016 /tools deals surface — with live links landing (railway first), the directory should sell them: sort live-deal tools to the top of their category + a small "deal" badge on the card; the compare/alternatives pages already show status but could link the outbound url too. keep the honest disclosure copy — branch growth/g-0016-deals-surface
+- [ ] g-0017 /stack page — "the stack this site runs on": cloudflare workers, github, stripe, livegraph, devin — each tool page linked, each live deal disclosed. classic affiliate surface ("uses" page) with the receipts twist: every entry cites the actual service powering the site — branch growth/g-0017-stack-page
+- [ ] g-0018 findings → tool-page crosslinks — every findings post mentions tools by name in prose but doesn't link them; wire slug-mentions to /tools/<slug> links so readers land on monetizable pages — small diff, compounds with every future post — branch growth/g-0018-findings-crosslinks
+
 ## done
 
 - g-0001 pick the first niche — #1
