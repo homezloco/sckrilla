@@ -278,13 +278,12 @@
     "fit": "Rapid UI prototyping and frontend design iteration connected with Next.js ecosystem.",
     "watchOut": "Focused strictly on frontend UI code rather than complete backend logic.",
     "affiliate": {
-      "status": "parked",
+      "status": "na",
       "url": "",
-      "program": "dub — $5/lead + 30% 6mo",
-      "applyUrl": "https://partners.dub.co/v0"
+      "program": "none — dub partner page 404s as of 2026-11-19, program appears dead"
     },
     "ours": false,
-    "updated": "2026-11-18"
+    "updated": "2026-11-19"
   },
   {
     "slug": "cursor-vs-windsurf",

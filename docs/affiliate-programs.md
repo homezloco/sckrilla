@@ -81,7 +81,7 @@ vendor's own page or a dated verification:
 | Railway | real — 15% of invoices for 12 months, no approval needed (link lives in the workspace dashboard) | docs.railway.com/community/affiliate-program |
 | bolt.new | real — launched 2026-07 via Cello, 15% of subscription capped at $50/referral | bolt.new/platform/referral |
 | CodeRabbit | real — Dub-hosted, $30 per lead | partners.dub.co/coderabbit |
-| v0 by Vercel | real — Dub, $5/lead + 30% for 6 months (one tracker saw a 404 on the Dub page 2026-10; re-verify before applying) | partners.dub.co/v0 |
+| v0 by Vercel | dead — Dub partner page 404s, confirmed 2026-11-19 (the 2026-10 404 sighting was right; the program's gone) | — |
 | Spaceship | real — Impact, 25% default / up to 50% by category | spaceship.com/affiliate-program |
 | Replit | real — referral, $20 credits both sides (credits, never cash) | replit.com/refer |
 | JetBrains/Junie | real — content creators program, free licenses not cash, needs ~2k followers | jetbrains.com/community/content-creators |
@@ -99,4 +99,5 @@ vendor's own page or a dated verification:
 
 the cash programs worth applying to first: DigitalOcean (CJ), Railway
 (instant — link's already in the dashboard), CodeRabbit (Dub), bolt.new
-(Cello), v0 (Dub). five applications, ~30 min total.
+(Cello). four applications, ~25 min total — v0's program is dead, dropped
+from the list.
