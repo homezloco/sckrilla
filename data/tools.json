@@ -12,7 +12,7 @@
     "affiliate": {
       "status": "parked",
       "url": "",
-      "program": ""
+      "program": "referral dead 2026-07 \u2014 custom deal only"
     },
     "ours": false
   },
@@ -42,9 +42,9 @@
     "fit": "Lowest-friction option if you're already in the GitHub/VS Code stack.",
     "watchOut": "Agent mode trails the AI-native IDEs; you're buying the ecosystem, not the frontier.",
     "affiliate": {
-      "status": "parked",
+      "status": "na",
       "url": "",
-      "program": ""
+      "program": "none \u2014 verified"
     },
     "ours": false
   },
@@ -58,8 +58,9 @@
     "fit": "The power tool for people who live in a shell and want clean commits per change.",
     "watchOut": "No IDE chrome \u2014 it's a CLI discipline, and token costs are yours to watch.",
     "affiliate": {
-      "status": "parked",
-      "url": ""
+      "status": "na",
+      "url": "",
+      "program": "none \u2014 open source"
     },
     "ours": false,
     "updated": "2026-11-18"
@@ -74,9 +75,9 @@
     "fit": "The self-hostable answer when you want Ollama/local models or a custom stack.",
     "watchOut": "Assembly required \u2014 quality tracks the model and config you feed it.",
     "affiliate": {
-      "status": "parked",
+      "status": "na",
       "url": "",
-      "program": ""
+      "program": "none \u2014 enterprise partners only"
     },
     "ours": false
   },
@@ -124,7 +125,7 @@
     "affiliate": {
       "status": "live",
       "url": "https://replit.com/refer/milkmoney",
-      "program": "Replit referral ($20 credits)",
+      "program": "Replit referral ($20 credits, both sides)",
       "applyUrl": "https://replit.com/refer"
     },
     "ours": false,
@@ -158,7 +159,7 @@
     "affiliate": {
       "status": "parked",
       "url": "",
-      "program": "Impact",
+      "program": "Impact \u2014 25-50% first purchase",
       "applyUrl": "https://www.spaceship.com/affiliate-program/"
     },
     "ours": false
@@ -175,7 +176,7 @@
     "affiliate": {
       "status": "na",
       "url": "",
-      "program": ""
+      "program": "none \u2014 verified"
     },
     "ours": false
   },
@@ -208,7 +209,7 @@
     "affiliate": {
       "status": "na",
       "url": "",
-      "program": "",
+      "program": "creators program \u2014 free licenses, needs 2k followers",
       "applyUrl": "https://www.jetbrains.com/community/content-creators/"
     },
     "ours": false,
@@ -260,7 +261,8 @@
     "affiliate": {
       "status": "parked",
       "url": "",
-      "program": ""
+      "program": "cello referral \u2014 up to $50/referral",
+      "applyUrl": "https://bolt.new/platform/referral"
     },
     "ours": false,
     "updated": "2026-11-18"
@@ -275,9 +277,10 @@
     "fit": "Rapid UI prototyping and frontend design iteration connected with Next.js ecosystem.",
     "watchOut": "Focused strictly on frontend UI code rather than complete backend logic.",
     "affiliate": {
-      "status": "na",
+      "status": "parked",
       "url": "",
-      "program": ""
+      "program": "dub \u2014 $5/lead + 30% 6mo",
+      "applyUrl": "https://partners.dub.co/v0"
     },
     "ours": false,
     "updated": "2026-11-18"
@@ -392,7 +395,8 @@
     "affiliate": {
       "status": "parked",
       "url": "",
-      "program": "referral \u2014 verify"
+      "program": "dub \u2014 $30 per lead",
+      "applyUrl": "https://partners.dub.co/coderabbit"
     },
     "ours": false
   },
@@ -408,7 +412,7 @@
     "affiliate": {
       "status": "na",
       "url": "",
-      "program": ""
+      "program": "none \u2014 unverified listings only"
     },
     "ours": false
   },
@@ -424,7 +428,7 @@
     "affiliate": {
       "status": "na",
       "url": "",
-      "program": ""
+      "program": "none \u2014 verified"
     },
     "ours": false
   },
@@ -440,7 +444,7 @@
     "affiliate": {
       "status": "na",
       "url": "",
-      "program": ""
+      "program": "none \u2014 marketplace rev-share is for template authors"
     },
     "ours": false
   },
@@ -456,7 +460,7 @@
     "affiliate": {
       "status": "na",
       "url": "",
-      "program": ""
+      "program": "none \u2014 partner network is enterprise consulting"
     },
     "ours": false
   },
@@ -504,7 +508,8 @@
     "affiliate": {
       "status": "parked",
       "url": "",
-      "program": "referral \u2014 $25 credit per signup"
+      "program": "CJ \u2014 10% recurring 12mo",
+      "applyUrl": "https://www.digitalocean.com/affiliates"
     },
     "updated": "2026-11-19"
   },
@@ -518,9 +523,9 @@
     "fit": "The Heroku-shaped hole filler \u2014 git push to deploy, cron jobs, and static hosting under one roof. Where this site's loop would live if it weren't on Workers.",
     "watchOut": "Free tier spins down \u2014 cold starts on the free plan are real.",
     "affiliate": {
-      "status": "parked",
+      "status": "na",
       "url": "",
-      "program": "partnerstack \u2014 application in flight"
+      "program": "none \u2014 referral program closed by Render Oct 2024"
     },
     "updated": "2026-11-19"
   },
@@ -536,7 +541,8 @@
     "affiliate": {
       "status": "parked",
       "url": "",
-      "program": "referral \u2014 verify"
+      "program": "15% of invoices, 12mo \u2014 link in dashboard",
+      "applyUrl": "https://docs.railway.com/community/affiliate-program"
     },
     "updated": "2026-11-19"
   },
@@ -552,7 +558,8 @@
     "affiliate": {
       "status": "parked",
       "url": "",
-      "program": "referral \u2014 verify"
+      "program": "referral \u2014 swag/gift-card tiers, no cash",
+      "applyUrl": "https://docs.warp.dev/support-and-community/community/refer-a-friend/"
     },
     "updated": "2026-11-19"
   }

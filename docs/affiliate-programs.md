@@ -68,3 +68,35 @@ cf workers secrets update LIVEGRAPH_API_KEY    # optional — powers the recent-
 a fine-grained PAT scoped to this one repo is the right token; the repo is
 public, so the blast radius is only "can commit to a public repo" — but
 scope it anyway.
+
+## verified program pages (2026-11-19 sweep)
+
+the admin console now links straight to signup pages via `affiliate.applyUrl`.
+what the sweep actually found — every claim below was checked against the
+vendor's own page or a dated verification:
+
+| tool | verdict | signup page |
+|---|---|---|
+| DigitalOcean | real — CJ network, 10% recurring for 12 months, cash | digitalocean.com/affiliates |
+| Railway | real — 15% of invoices for 12 months, no approval needed (link lives in the workspace dashboard) | docs.railway.com/community/affiliate-program |
+| bolt.new | real — launched 2026-07 via Cello, 15% of subscription capped at $50/referral | bolt.new/platform/referral |
+| CodeRabbit | real — Dub-hosted, $30 per lead | partners.dub.co/coderabbit |
+| v0 by Vercel | real — Dub, $5/lead + 30% for 6 months (one tracker saw a 404 on the Dub page 2026-10; re-verify before applying) | partners.dub.co/v0 |
+| Spaceship | real — Impact, 25% default / up to 50% by category | spaceship.com/affiliate-program |
+| Replit | real — referral, $20 credits both sides (credits, never cash) | replit.com/refer |
+| JetBrains/Junie | real — content creators program, free licenses not cash, needs ~2k followers | jetbrains.com/community/content-creators |
+| Warp | real but swag — referral pays themes/gift cards, no cash | docs.warp.dev/.../refer-a-friend |
+| Cursor | dead — referral program officially closed 2026-07-23 (confirmed by Cursor staff on their forum). custom-deal path only. | — |
+| Render | dead — referral program request explicitly closed Oct 2024; render.com/affiliate 404s. (the earlier "partnerstack — application in flight" note was wrong and has been corrected) | — |
+| GitHub Copilot | none — B2B channel only, verified Aug 2026 | — |
+| Resend | none — /affiliates and /partners both 404, verified Jul 2026 | — |
+| Aider, Continue, Cline, Roo, OpenCode | none — open source | — |
+| Claude Code, Codex CLI, Gemini CLI | none — big-co, no programs | — |
+| Greptile, Graphite | none verified — only unverified third-party listings exist | — |
+| CrewAI | none — the marketplace rev-share is for template authors, not referrers | — |
+| LangGraph | none — LangChain Partner Network is enterprise consulting | — |
+| Cloudflare | na — partner network is agency/reseller track, not a signup link | — |
+
+the cash programs worth applying to first: DigitalOcean (CJ), Railway
+(instant — link's already in the dashboard), CodeRabbit (Dub), bolt.new
+(Cello), v0 (Dub). five applications, ~30 min total.
