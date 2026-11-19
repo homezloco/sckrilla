@@ -60,9 +60,12 @@ unlock earned credits.
 ## worker secrets (set once)
 
 ```
-cf workers secrets update ADMIN_KEY            # any strong string — the console key
-cf workers secrets update GITHUB_ADMIN_TOKEN   # PAT with contents:write on homezloco/sckrilla
-cf workers secrets update LIVEGRAPH_API_KEY    # optional — powers the recent-runs card
+cf workers secrets update ADMIN_KEY               # any strong string — the console key
+cf workers secrets update GITHUB_ADMIN_TOKEN      # PAT with contents:write on homezloco/sckrilla
+cf workers secrets update LIVEGRAPH_API_KEY       # optional — powers the recent-runs card
+cf workers secrets update LIVEGRAPH_WEBHOOK_SECRET # optional — lets anna's graph self-log
+                                                    # ledger receipts via /api/livegraph/webhook
+                                                    # (its own secret, not ADMIN_KEY)
 ```
 
 a fine-grained PAT scoped to this one repo is the right token; the repo is
