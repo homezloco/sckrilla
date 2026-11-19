@@ -73,19 +73,14 @@ two things changed since the kit was written — fold them in if you want:
 post → then log a `publish` ledger line (see bottom). if you thread it,
 the 4-post variant in the kit is ready as-is.
 
-## D. stripe webhook (~5 min — needs shane)
+## D. stripe webhook — ✅ done
 
-this one can't be delegated: it needs the cloudflare login.
+endpoint created, `STRIPE_WEBHOOK_SECRET` bound — the live endpoint at
+`https://sckrilla.com/api/stripe/webhook` now rejects unsigned posts with
+400 instead of 503. the earn column books itself from here on.
 
-1. stripe dashboard → developers → webhooks → add endpoint
-   `https://sckrilla.com/api/stripe/webhook`
-   events: `checkout.session.completed` + `invoice.paid`
-2. copy the signing secret (`whsec_…`) → in the repo dir:
-   `cf workers secrets update STRIPE_WEBHOOK_SECRET`
-3. send a test `checkout.session.completed` event — an `earn` line should
-   land in `data/ledger.jsonl` within seconds.
-
-until this is done, earned dollars still get booked — just by hand.
+nothing left to do — a test event is optional but harmless (unknown links
+are ignored by design).
 
 ---
 
