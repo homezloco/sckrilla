@@ -540,9 +540,9 @@
     "fit": "When the thing you need to run isn't a function — bots, queues, long-lived services. The DX is the pitch.",
     "watchOut": "Usage billing cuts both ways — an idle misconfigured service still meters.",
     "affiliate": {
-      "status": "parked",
-      "url": "",
-      "program": "15% of invoices, 12mo — link in dashboard",
+      "status": "live",
+      "url": "https://railway.com?referralCode=hLIntG",
+      "program": "referral — 15% of invoices 12mo",
       "applyUrl": "https://docs.railway.com/community/affiliate-program"
     },
     "updated": "2026-11-19"
