@@ -39,6 +39,11 @@ payout terms are already verified and noted there:
 - **Railway** — instant, no approval. sign in → workspace → refer → copy
   link → paste it in `/admin` → go live. 15% of invoices for 12 months.
   easiest win on the board — do this first.
+- **Newly** — newly.app/affiliates. Tolt, **60% of a new customer's first
+  6 months**, self-serve, no minimum payout — highest rate on the board
+  and no approval either. also instant.
+- **Lovable** — lovable.dev/partners/affiliates. Impact, up to $100 per
+  first-time subscriber — biggest consumer funnel in the category.
 - **CodeRabbit** — partners.dub.co/coderabbit. $30 per lead, Dub-hosted.
 - **bolt.new** — bolt.new/platform/referral. Cello, up to $50/referral.
 - **DigitalOcean** — digitalocean.com/affiliates. CJ network, 10%

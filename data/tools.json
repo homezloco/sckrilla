@@ -563,5 +563,55 @@
       "applyUrl": "https://docs.warp.dev/support-and-community/community/refer-a-friend/"
     },
     "updated": "2026-11-19"
+  },
+  {
+    "slug": "lovable",
+    "name": "Lovable",
+    "kind": "tool",
+    "category": "autonomous-agent",
+    "tagline": "Prompt-to-app builder \u2014 the mainstream breakout of the AI app-builder wave.",
+    "pricing": "free tier; Pro from $25/mo",
+    "fit": "The non-developer's answer to 'make me an app' \u2014 full-stack output you can edit and ship, with the biggest top-of-funnel in the category.",
+    "watchOut": "Credit metering on edits burns fast on complex apps; the generated code still needs a developer when it breaks.",
+    "affiliate": {
+      "status": "parked",
+      "url": "",
+      "program": "Impact \u2014 up to $100 per first-time subscriber",
+      "applyUrl": "https://lovable.dev/partners/affiliates"
+    },
+    "updated": "2026-11-19"
+  },
+  {
+    "slug": "newly",
+    "name": "Newly",
+    "kind": "tool",
+    "category": "autonomous-agent",
+    "tagline": "AI builder for native iOS/Android apps \u2014 formerly Natively, React Native + Expo under the hood.",
+    "pricing": "from $25/mo",
+    "fit": "The app-builder niche's mobile arm: prompt to TestFlight/App Store with full source ownership \u2014 a real differentiator vs web-only builders.",
+    "watchOut": "Smaller ecosystem than the web builders; mobile submission still means Apple/Google review roulette.",
+    "affiliate": {
+      "status": "parked",
+      "url": "",
+      "program": "tolt \u2014 60% of first 6 months, self-serve",
+      "applyUrl": "https://newly.app/affiliates"
+    },
+    "updated": "2026-11-19"
+  },
+  {
+    "slug": "tabnine",
+    "name": "Tabnine",
+    "kind": "tool",
+    "category": "ai-ide",
+    "tagline": "The privacy-first AI code assistant \u2014 on-prem and air-gapped deployment.",
+    "pricing": "from $39/user/mo",
+    "fit": "The enterprise-compliance answer: runs behind your firewall, zero retention, the assistant regulated industries can actually approve.",
+    "watchOut": "Went enterprise-only in 2025 \u2014 no free/individual tier left.",
+    "affiliate": {
+      "status": "na",
+      "url": "",
+      "program": "channel partners only \u2014 no self-serve affiliate"
+    },
+    "updated": "2026-11-19"
   }
 ]
