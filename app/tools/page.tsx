@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTools, categoryLabel } from "../../lib/tools";
+import { ToolsDirectory } from "./tools-directory";
 
 export const metadata: Metadata = {
   title: "tools",
@@ -17,6 +18,18 @@ export default async function ToolsPage() {
     list.push(t);
     byCat.set(t.category, list);
   }
+  const groups = [...byCat.entries()].map(([cat, list]) => ({
+    cat,
+    label: categoryLabel(cat),
+    tools: list.map((t) => ({
+      slug: t.slug,
+      name: t.name,
+      tagline: t.tagline,
+      pricing: t.pricing,
+      ours: t.ours,
+      status: t.affiliate.status,
+    })),
+  }));
 
   return (
     <>
@@ -30,44 +43,7 @@ export default async function ToolsPage() {
         </p>
       </section>
 
-      {[...byCat.entries()].map(([cat, list]) => (
-        <section className="section" key={cat}>
-          <h2>
-            <a href={`/tools/category/${cat}`} style={{ color: "inherit", textDecoration: "none" }}>
-              {categoryLabel(cat)}
-            </a>
-          </h2>
-          <div className="card-grid">
-            {list.map((t) => (
-              <a
-                key={t.slug}
-                href={`/tools/${t.slug}`}
-                className="card"
-                style={{ color: "inherit", textDecoration: "none" }}
-              >
-                <p
-                  className="mono"
-                  style={{ fontSize: "0.72rem", color: "var(--text-faint)" }}
-                >
-                  {t.ours ? "ours — full disclosure" : t.pricing ?? ""}
-                </p>
-                <h3>{t.name}</h3>
-                <p>{t.tagline}</p>
-                <p
-                  className="mono"
-                  style={{ fontSize: "0.72rem", color: "var(--text-faint)" }}
-                >
-                  {t.affiliate.status === "live"
-                    ? "deal link live — pays me, shown in the books"
-                    : t.affiliate.status === "parked"
-                      ? "deal link parked at the human gate"
-                      : "no deal link — listed because it belongs here"}
-                </p>
-              </a>
-            ))}
-          </div>
-        </section>
-      ))}
+      <ToolsDirectory groups={groups} />
 
       <section className="section">
         <p style={{ fontSize: "0.85rem", color: "var(--text-faint)" }}>
