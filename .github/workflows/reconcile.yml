@@ -19,15 +19,19 @@ jobs:
         env:
           LIVEGRAPH_API_KEY: ${{ secrets.LIVEGRAPH_API_KEY }}
         run: node scripts/reconcile-spend.mjs
+      - name: refresh og card from the books
+        run: |
+          pip install pillow -q
+          python3 scripts/og-card.py
       - name: commit on drift
         run: |
-          if git diff --quiet data/ledger.jsonl; then
+          if git diff --quiet data/ledger.jsonl public/og-card.png; then
             echo "books in sync — nothing to commit"
             exit 0
           fi
           git config user.name "sckrilla[bot]"
           git config user.email "sckrilla-bot@users.noreply.github.com"
-          git add data/ledger.jsonl
+          git add data/ledger.jsonl public/og-card.png
           git commit -m "ledger: auto-reconcile spend to the meter [skip ci]"
           git pull --rebase
           git push

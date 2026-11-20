@@ -546,7 +546,65 @@
       "program": "referral — 15% of invoices 12mo",
       "applyUrl": "https://docs.railway.com/community/affiliate-program"
     },
-    "updated": "2026-11-19"
+    "updated": "2026-11-20",
+    "pickLine": "you have a real service (bot, queue, api) that outgrew functions — and want the deploy to stay boring"
+  },
+  {
+    "slug": "vultr",
+    "name": "Vultr",
+    "kind": "tool",
+    "category": "infra",
+    "tagline": "SSD cloud compute in 30+ regions — bare metal, k8s, and $2.50/mo instances.",
+    "pricing": "usage-based; from $2.50/mo shared CPU",
+    "fit": "The classic VPS answer when you want a region DO doesn't cover or bare-metal pricing.",
+    "watchOut": "Referral pays once ($35 after referral burns $35+) — no recurring. fine for a directory, wrong tool for compounding.",
+    "pickLine": "you want cheap honest VPS instances in odd regions and don't need managed anything",
+    "affiliate": {
+      "status": "parked",
+      "url": "",
+      "program": "referral — give $100 credit, get $35 per qualified referral (paypal or credit). self-serve from customer portal",
+      "applyUrl": "https://www.vultr.com/company/referral-program/"
+    },
+    "ours": false,
+    "updated": "2026-11-20"
+  },
+  {
+    "slug": "upcloud",
+    "name": "UpCloud",
+    "kind": "tool",
+    "category": "infra",
+    "tagline": "European cloud with aggressive performance claims — MaxIOPS storage, predictable pricing.",
+    "pricing": "usage-based; from ~€3/mo",
+    "fit": "The sovereignty angle — EU data residency without a hyperscaler, and fast disks.",
+    "watchOut": "Manual application review; pays $10 trial + $20 conversion + $100 at $150 usage — rewards real users, not clicks.",
+    "pickLine": "your user or client needs EU data residency and still wants cloud-native ergonomics",
+    "affiliate": {
+      "status": "parked",
+      "url": "",
+      "program": "up to ~$130/customer: $10 trial + $20 first payment + $100 milestone at $150 usage. reviewed application",
+      "applyUrl": "https://upcloud.com/global/affiliate-program/"
+    },
+    "ours": false,
+    "updated": "2026-11-20"
+  },
+  {
+    "slug": "hostinger",
+    "name": "Hostinger",
+    "kind": "tool",
+    "category": "infra",
+    "tagline": "Budget hosting + site builder — cheap entry tiers, aggressive affiliate economics.",
+    "pricing": "from ~$3/mo promo, renews higher",
+    "fit": "The price floor for 'get a site up' asks — shared, VPS, and an AI builder that's paying 60% right now.",
+    "watchOut": "Pays on initial purchase only (12mo+ terms), monthly plans excluded, strict no-brand-bidding. consumer-flavored brand vs a dev audience.",
+    "pickLine": "the ask is 'cheapest possible site that isn't a scam' — not when the ask is developer tooling",
+    "affiliate": {
+      "status": "parked",
+      "url": "",
+      "program": "up to 40% hosting / 60% AI builder, initial purchase 12mo+ terms. instant signup",
+      "applyUrl": "https://www.hostinger.com/affiliates"
+    },
+    "ours": false,
+    "updated": "2026-11-20"
   },
   {
     "slug": "warp",
