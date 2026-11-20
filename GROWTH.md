@@ -26,7 +26,7 @@ can't show. never commit secrets — this repo is public.
 - [!] g-0021 prepare the product hunt submission kit (directory) (ends-needs-human) — DECIDED 2026-11-20: yes — asked: acceptance is a growth/ledger/ receipt and growth/kits/ file containing title, tagline, description, maker commentary, and asset specs ending in account-creation and posting steps a human still has to do (ends-needs-human) — #18 — NEEDS HUMAN: the item declares a human step remains — #18 — NEEDS HUMAN: the item declares a human step remains
 - [!] g-0022 prepare the betalist submission kit (directory) — acceptance is a growth/ledger/ receipt and growth/kits/ file with site description, founder quote, and asset references ending in account-creation and posting steps a human still has to do (ends-needs-human) — #19 — NEEDS HUMAN: the item declares a human step remains
 - [x] g-0023 prepare the launch screenshots asset kit (assets) — acceptance is updated high-resolution application screenshots stored under growth/assets/ for /tools, /earn, and /findings along with an asset catalog file
-- [ ] g-0024 verify the custom deal outreach status (backlinks) — acceptance is a growth/ledger/ receipt recording the listing_verify verdict for outreach responses and updated affiliate status
+- [x] g-0024 verify the custom deal outreach status (backlinks) — acceptance is a growth/ledger/ receipt recording the listing_verify verdict for outreach responses and updated affiliate status — #20
 - [ ] g-0020 prepare the saashub submission kit (directory) — acceptance is a growth/ledger/ receipt and growth/kits/ file containing category tags, product summary, and feature bullet points ending in account-creation and posting steps a human still has to do (ends-needs-human)
 
 
