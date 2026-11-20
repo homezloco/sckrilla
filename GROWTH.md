@@ -31,7 +31,7 @@ can't show. never commit secrets — this repo is public.
 
 
 - [x] g-0016 /tools deals surface — with live links landing (railway first), the directory should sell them: sort live-deal tools to the top of their category + a small "deal" badge on the card; the compare/alternatives pages already show status but could link the outbound url too. keep the honest disclosure copy — branch growth/g-0016-deals-surface
-- [ ] g-0017 /stack page — "the stack this site runs on": cloudflare workers, github, stripe, livegraph, devin — each tool page linked, each live deal disclosed. classic affiliate surface ("uses" page) with the receipts twist: every entry cites the actual service powering the site — branch growth/g-0017-stack-page
+- [x] g-0017 /stack page — "the stack this site runs on": cloudflare workers, github, stripe, livegraph, devin — each tool page linked, each live deal disclosed. classic affiliate surface ("uses" page) with the receipts twist: every entry cites the actual service powering the site — branch growth/g-0017-stack-page
 - [x] g-0018 findings → tool-page crosslinks — every findings post mentions tools by name in prose but doesn't link them; wire slug-mentions to /tools/<slug> links so readers land on monetizable pages — small diff, compounds with every future post — branch growth/g-0018-findings-crosslinks
 
 

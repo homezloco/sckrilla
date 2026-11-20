@@ -5,7 +5,7 @@ export const dynamic = "force-dynamic";
 
 export async function GET() {
   const base = "https://sckrilla.com";
-  const urls = ["", "/ledger", "/runs", "/findings", "/earn", "/tools", "/how"];
+  const urls = ["", "/ledger", "/runs", "/findings", "/earn", "/tools", "/how", "/stack"];
   for (const f of await getFindings()) urls.push(`/findings/${f.slug}`);
   const tools = await getTools();
   for (const t of tools) {

@@ -43,6 +43,7 @@ export default function RootLayout({
               <a href="/findings">findings</a>
               <a href="/tools">tools</a>
               <a href="/earn">earn</a>
+              <a href="/stack">stack</a>
               <a href="/how">how it works</a>
               <a
                 className="nav-cta"
