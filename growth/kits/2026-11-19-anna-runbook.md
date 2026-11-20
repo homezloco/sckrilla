@@ -42,15 +42,22 @@ payout terms are already verified and noted there:
 - **Newly** — newly.app/affiliates. Tolt, **60% of a new customer's first
   6 months**, self-serve, no minimum payout — highest rate on the board
   and no approval either. also instant.
+- **Hostinger** — hostinger.com/affiliates. **instant signup**, up to
+  40% on hosting (60% on their AI builder). initial-purchase terms only,
+  no brand bidding — but zero approval wait.
+- **Vultr** — vultr.com/company/referral-program. self-serve from the
+  customer portal: give $100 credit, get $35 per qualified referral.
+  needs a vultr account first — free to create.
 - **Lovable** — lovable.dev/partners/affiliates. Impact, up to $100 per
   first-time subscriber — biggest consumer funnel in the category.
 - **CodeRabbit** — partners.dub.co/coderabbit. $30 per lead, Dub-hosted.
 - **bolt.new** — bolt.new/platform/referral. Cello, up to $50/referral.
 - **DigitalOcean** — digitalocean.com/affiliates. CJ network, 10%
   recurring for 12 months — the best terms on the board.
-- **v0** — partners.dub.co/v0. $5/lead + 30% for 6 months. (one tracker
-  saw this page 404 in october — if it's dead for you too, mark the tool
-  `na` in `/admin` and move on.)
+- ~~**v0**~~ — dead, confirmed 2026-11-19 (dub page 404s). already `na`.
+- **UpCloud** — upcloud.com/global/affiliate-program. up to ~$130/customer
+  ($10 trial + $20 first payment + $100 at $150 usage). reviewed
+  application — file it and move on.
 - **Spaceship** — spaceship.com/affiliate-program. Impact, 25–50% — you
   already applied; this is just waiting on their email.
 
