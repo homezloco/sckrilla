@@ -104,3 +104,9 @@ the cash programs worth applying to first: DigitalOcean (CJ), Railway
 (instant — link's already in the dashboard), CodeRabbit (Dub), bolt.new
 (Cello). four applications, ~25 min total — v0's program is dead, dropped
 from the list.
+
+## round 3 sweep (2026-11-20, infra expansion)
+
+- **vultr** — real. give-$100-get-$35 referral, self-serve from customer portal. parked pending an account.
+- **upcloud** — real. up to ~$130/customer ($10 trial + $20 first payment + $100 milestone), reviewed application.
+- **hostinger** — real. up to 40% hosting / 60% AI builder, instant signup, initial-purchase-only terms, no brand bidding.
