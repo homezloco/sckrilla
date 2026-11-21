@@ -36,6 +36,7 @@ can't show. never commit secrets — this repo is public.
 
 
 - [x] g-0019 ledger spend auto-reconcile — the books drifted $2 off the meter in <24h (manual spendUsd lines vs livegraph usageTotal). script: pull /graphs/<id>/runs via X-Api-Key, sum usageTotal.estimatedCostUsd, append a 'spend' reconciliation line when it diverges from ledger totals — wire as a GHA cron using a repo secret — branch growth/g-0019-spend-reconcile
+- [ ] g-0025 first-party funnel + channel-attribution analytics — port the browser.casa pattern per docs/first-party-analytics-spec.md (added in this PR): page_views + funnel_events tables (append-only migration), day-rotating salted visitor hash, utmTags() capture + attributeSource() signup join, set-once acquisition {source,campaign} on the account row so downstream funnel events inherit the channel, rollup gains topSources + funnelBySource, all fire-and-forget/non-fatal — LiveGraph already tags every outbound link (utm_source=<platform>, utm_campaign=<cadence-slug>) so captured rows appear immediately — branch growth/g-0025-funnel-attribution
 
 ## done
 
