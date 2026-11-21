@@ -41,6 +41,7 @@ can't show. never commit secrets — this repo is public.
 - [ ] g-0027 prepare the alternativeTo submission kit (directory) — acceptance is a growth/ledger/ receipt and growth/kits/ file containing application description, category mappings, and alternative tools list ending in account-creation and posting steps a human still has to do (ends-needs-human)
 - [ ] g-0028 prepare the startup base submission kit (directory) — acceptance is a growth/ledger/ receipt and growth/kits/ file containing startup pitch, maker bio, and link profiles ending in account-creation and posting steps a human still has to do (ends-needs-human)
 - [ ] g-0029 verify the saashub listing is live (directory) — acceptance is a growth/ledger/ receipt recording the listing_verify verdict for SaaSHub once submitted
+- [ ] g-0030 first-party funnel + channel-attribution analytics — port the browser.casa pattern per docs/first-party-analytics-spec.md (added in this PR): page_views + funnel_events tables (append-only migration), day-rotating salted visitor hash, utmTags() capture + attributeSource() signup join, set-once acquisition {source,campaign} on the account row so downstream funnel events inherit the channel, rollup gains topSources + funnelBySource, all fire-and-forget/non-fatal — LiveGraph already tags every outbound link (utm_source=<platform>, utm_campaign=<cadence-slug>) so captured rows appear immediately — branch growth/g-0025-funnel-attribution
 
 ## done
 
