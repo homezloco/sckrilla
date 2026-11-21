@@ -37,7 +37,7 @@ can't show. never commit secrets — this repo is public.
 
 - [x] g-0019 ledger spend auto-reconcile — the books drifted $2 off the meter in <24h (manual spendUsd lines vs livegraph usageTotal). script: pull /graphs/<id>/runs via X-Api-Key, sum usageTotal.estimatedCostUsd, append a 'spend' reconciliation line when it diverges from ledger totals — wire as a GHA cron using a repo secret — branch growth/g-0019-spend-reconcile
 - [x] g-0025 verify the product hunt listing is live (directory) — acceptance is a growth/ledger/ receipt recording the listing_verify verdict for Product Hunt and updating directory status — #24
-- [ ] g-0026 verify the betalist listing is live (directory) — acceptance is a growth/ledger/ receipt recording the listing_verify verdict for BetaList and updating directory status
+- [x] g-0026 verify the betalist listing is live (directory) — acceptance is a growth/ledger/ receipt recording the listing_verify verdict for BetaList and updating directory status — #25
 - [ ] g-0027 prepare the alternativeTo submission kit (directory) — acceptance is a growth/ledger/ receipt and growth/kits/ file containing application description, category mappings, and alternative tools list ending in account-creation and posting steps a human still has to do (ends-needs-human)
 - [ ] g-0028 prepare the startup base submission kit (directory) — acceptance is a growth/ledger/ receipt and growth/kits/ file containing startup pitch, maker bio, and link profiles ending in account-creation and posting steps a human still has to do (ends-needs-human)
 - [ ] g-0029 verify the saashub listing is live (directory) — acceptance is a growth/ledger/ receipt recording the listing_verify verdict for SaaSHub once submitted
