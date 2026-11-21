@@ -28,11 +28,6 @@ can't show. never commit secrets — this repo is public.
 - [x] g-0023 prepare the launch screenshots asset kit (assets) — acceptance is updated high-resolution application screenshots stored under growth/assets/ for /tools, /earn, and /findings along with an asset catalog file
 - [x] g-0024 verify the custom deal outreach status (backlinks) — acceptance is a growth/ledger/ receipt recording the listing_verify verdict for outreach responses and updated affiliate status — #20
 - [ ] g-0020 prepare the saashub submission kit (directory) — acceptance is a growth/ledger/ receipt and growth/kits/ file containing category tags, product summary, and feature bullet points ending in account-creation and posting steps a human still has to do (ends-needs-human)
-- [ ] g-0025 verify the product hunt listing is live (directory) — acceptance is a growth/ledger/ receipt recording the listing_verify verdict for Product Hunt and updating directory status
-- [ ] g-0026 verify the betalist listing is live (directory) — acceptance is a growth/ledger/ receipt recording the listing_verify verdict for BetaList and updating directory status
-- [ ] g-0027 prepare the alternativeTo submission kit (directory) — acceptance is a growth/ledger/ receipt and growth/kits/ file containing application description, category mappings, and alternative tools list ending in account-creation and posting steps a human still has to do (ends-needs-human)
-- [ ] g-0028 prepare the startup base submission kit (directory) — acceptance is a growth/ledger/ receipt and growth/kits/ file containing startup pitch, maker bio, and link profiles ending in account-creation and posting steps a human still has to do (ends-needs-human)
-- [ ] g-0029 verify the saashub listing is live (directory) — acceptance is a growth/ledger/ receipt recording the listing_verify verdict for SaaSHub once submitted
 
 
 - [x] g-0016 /tools deals surface — with live links landing (railway first), the directory should sell them: sort live-deal tools to the top of their category + a small "deal" badge on the card; the compare/alternatives pages already show status but could link the outbound url too. keep the honest disclosure copy — branch growth/g-0016-deals-surface
@@ -41,6 +36,11 @@ can't show. never commit secrets — this repo is public.
 
 
 - [x] g-0019 ledger spend auto-reconcile — the books drifted $2 off the meter in <24h (manual spendUsd lines vs livegraph usageTotal). script: pull /graphs/<id>/runs via X-Api-Key, sum usageTotal.estimatedCostUsd, append a 'spend' reconciliation line when it diverges from ledger totals — wire as a GHA cron using a repo secret — branch growth/g-0019-spend-reconcile
+- [ ] g-0025 verify the product hunt listing is live (directory) — acceptance is a growth/ledger/ receipt recording the listing_verify verdict for Product Hunt and updating directory status
+- [ ] g-0026 verify the betalist listing is live (directory) — acceptance is a growth/ledger/ receipt recording the listing_verify verdict for BetaList and updating directory status
+- [ ] g-0027 prepare the alternativeTo submission kit (directory) — acceptance is a growth/ledger/ receipt and growth/kits/ file containing application description, category mappings, and alternative tools list ending in account-creation and posting steps a human still has to do (ends-needs-human)
+- [ ] g-0028 prepare the startup base submission kit (directory) — acceptance is a growth/ledger/ receipt and growth/kits/ file containing startup pitch, maker bio, and link profiles ending in account-creation and posting steps a human still has to do (ends-needs-human)
+- [ ] g-0029 verify the saashub listing is live (directory) — acceptance is a growth/ledger/ receipt recording the listing_verify verdict for SaaSHub once submitted
 
 ## done
 
