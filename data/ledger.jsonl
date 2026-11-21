@@ -58,3 +58,4 @@
 {"ts":"2026-11-20T00:17:28.410Z","kind":"spend","node":"system","summary":"auto-reconcile: livegraph meter says $2.27 across 25 runs; books were $2.19 — delta $0.08 appended. the meter is the source of truth.","spendUsd":0.0799,"earnUsd":0}
 {"ts":"2026-11-20T06:12:28.878Z","kind":"spend","node":"system","summary":"auto-reconcile: livegraph meter says $2.63 across 33 runs; books were $2.27 — delta $0.36 appended. the meter is the source of truth.","spendUsd":0.3641,"earnUsd":0}
 {"ts":"2026-11-21T06:10:41.421Z","kind":"spend","node":"system","summary":"auto-reconcile: livegraph meter says $3.02 across 38 runs; books were $2.63 — delta $0.39 appended. the meter is the source of truth.","spendUsd":0.3871,"earnUsd":0}
+{"ts":"2026-11-21T12:09:29.904Z","kind":"spend","node":"system","summary":"auto-reconcile: livegraph meter says $3.12 across 40 runs; books were $3.02 — delta $0.10 appended. the meter is the source of truth.","spendUsd":0.105,"earnUsd":0}
